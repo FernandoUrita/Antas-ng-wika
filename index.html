@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fil">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interaktibong aralin at pagsusulit tungkol sa Antas ng Wika para sa kolehiyo.">
+  <meta name="theme-color" content="#121842">
+  <title>Antas ng Wika — Interaktibong Aralin</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23121842'/%3E%3Cpath d='M15 19h34v22H31l-10 8v-8h-6z' fill='%23ffc93c'/%3E%3Ccircle cx='24' cy='30' r='3' fill='%23ee5d46'/%3E%3Ccircle cx='32' cy='30' r='3' fill='%23121842'/%3E%3Ccircle cx='40' cy='30' r='3' fill='%23121842'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Pangunahing nabigasyon">
+      <a class="brand" href="#simula"><span class="brand-mark">Aa</span><span>ANTAS</span></a>
+      <div class="nav-links">
+        <a href="#aralin">Mga Aralin</a><a href="#gabay">Gabay</a><a class="nav-quiz" href="#pagsusulit">Pagsusulit</a>
+      </div>
+      <button class="menu" aria-label="Buksan ang menu" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="simula" class="hero section-pad">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">FILIPINO • WIKA AT LIPUNAN</p>
+        <h1>Hindi iisa ang paraan ng <em>pagsasalita.</em></h1>
+        <p class="lede">Nagbabago ang wika ayon sa kausap, lugar, layunin, at sitwasyon. Tuklasin kung paano pinipili ang angkop na antas ng wika—sa klase, komunidad, at digital na espasyo.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#aralin">Simulan ang aralin <span>↘</span></a>
+          <a class="text-link" href="#pagsusulit">Diretso sa pagsusulit →</a>
+        </div>
+        <div class="hero-meta"><span>3 interaktibong module</span><span>8 tanong</span><span>~15 minuto</span></div>
+      </div>
+      <div class="hero-art reveal" aria-label="Abstraktong biswal ng magkakaibang usapan">
+        <div class="orbit orbit-one"><span>po / opo</span></div>
+        <div class="orbit orbit-two"><span>pre, tara!</span></div>
+        <div class="orbit orbit-three"><span>ayon sa pag-aaral…</span></div>
+        <div class="sun">WIKA<span>nagbabago</span></div>
+      </div>
+    </section>
+
+    <section id="gabay" class="concept section-pad">
+      <div class="section-kicker">01 — PUNDASYON</div>
+      <div class="concept-grid">
+        <h2>Ang wika ay <span>nakaugat sa konteksto.</span></h2>
+        <div>
+          <p>Ang <strong>antas ng wika</strong> ay tumutukoy sa antas ng pormalidad at paraan ng paggamit ng salita batay sa sitwasyong panlipunan. Hindi awtomatikong “mabuti” o “masama” ang isang antas—ang mahalaga ay kung <em>angkop</em> ito.</p>
+          <div class="context-strip" aria-label="Apat na salik ng konteksto">
+            <span><b>01</b>Kausap</span><span><b>02</b>Layunin</span><span><b>03</b>Lugar</span><span><b>04</b>Daluyan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aralin" class="lessons section-pad">
+      <div class="section-head">
+        <div><div class="section-kicker">02 — MGA ARALIN</div><h2>Piliin ang larawang gustong tuklasin.</h2></div>
+        <p>I-click ang bawat module. May maikling paliwanag, mga halimbawa, at hamong pangkonteksto.</p>
+      </div>
+      <div class="lesson-grid">
+        <button class="lesson-card reveal" data-lesson="pormal" style="--accent:#ffc93c">
+          <img src="assets/pormal.png" alt="Mga estudyanteng nasa pormal na talakayan sa kampus">
+          <span class="lesson-no">01</span><span class="open-icon">↗</span>
+          <span class="lesson-copy"><small>PORMAL</small><strong>Pambansa at Panitikan</strong><span>Akademiko, propesyonal, at malikhaing gamit</span></span>
+        </button>
+        <button class="lesson-card reveal" data-lesson="barayti" style="--accent:#51c7b8">
+          <img src="assets/barayti.png" alt="Magkakaibigang mula sa iba't ibang pamayanan na nag-uusap">
+          <span class="lesson-no">02</span><span class="open-icon">↗</span>
+          <span class="lesson-copy"><small>KONTEKSTO</small><strong>Lalawiganin at Barayti</strong><span>Wikang hinuhubog ng lugar at pangkat</span></span>
+        </button>
+        <button class="lesson-card reveal" data-lesson="impormal" style="--accent:#ee5d46">
+          <img src="assets/impormal.png" alt="Mga estudyanteng nag-uusap gamit ang cellphone">
+          <span class="lesson-no">03</span><span class="open-icon">↗</span>
+          <span class="lesson-copy"><small>IMPORMAL</small><strong>Kolokyal at Balbal</strong><span>Pang-araw-araw at malikhaing usapan</span></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="compare section-pad">
+      <div class="section-kicker">03 — MABILISANG GABAY</div>
+      <h2>Ihambing ang gamit, hindi ang “halaga.”</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Antas / anyo</th><th>Karaniwang konteksto</th><th>Halimbawa</th><th>Dapat tandaan</th></tr></thead>
+          <tbody>
+            <tr><td><span class="dot yellow"></span>Pambansa</td><td>Ulat, klase, opisyal na usapan</td><td>“Magsisimula ang pagpupulong.”</td><td>Malinaw at kinikilalang pamantayan</td></tr>
+            <tr><td><span class="dot gold"></span>Panitikan</td><td>Tula, nobela, malikhaing akda</td><td>“Sumisibol ang pag-asa.”</td><td>Masining at matalinghaga</td></tr>
+            <tr><td><span class="dot teal"></span>Lalawiganin</td><td>Partikular na rehiyon o pamayanan</td><td>Mga salitang lokal sa komunidad</td><td>Bahagi ng identidad; unawain ang saklaw</td></tr>
+            <tr><td><span class="dot coral"></span>Kolokyal</td><td>Kaswal na usapan</td><td>“Kumusta?” / “Teka lang.”</td><td>Maikli at natural sa araw-araw</td></tr>
+            <tr><td><span class="dot blue"></span>Balbal</td><td>Barkada, subkultura, online spaces</td><td>“Lodi,” “petmalu”</td><td>Mabilis magbago; iwasan sa pormal na teksto</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pagsusulit" class="quiz-section section-pad">
+      <div class="quiz-intro">
+        <div class="section-kicker light">04 — PAGSUSULIT</div>
+        <h2>Handa ka na bang basahin ang konteksto?</h2>
+        <p>Walong sitwasyon. Piliin ang pinakaangkop na sagot, pagkatapos ay tingnan ang paliwanag sa bawat tanong.</p>
+        <div class="score-badge"><strong id="scorePreview">—</strong><span>iyong puntos<br>sa 8</span></div>
+      </div>
+      <div class="quiz-card" id="quizCard">
+        <div class="quiz-top"><span id="quizCount">Tanong 1 sa 8</span><div class="progress"><i id="progressBar"></i></div></div>
+        <p class="scenario" id="scenario"></p>
+        <h3 id="question"></h3>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <button id="nextBtn" class="button primary next" disabled>Susunod <span>→</span></button>
+      </div>
+      <div class="quiz-card result" id="resultCard" hidden>
+        <p class="eyebrow">RESULTA</p><div class="result-score"><span id="finalScore">0</span><small>/ 8</small></div>
+        <h3 id="resultTitle"></h3><p id="resultText"></p>
+        <button id="restartBtn" class="button primary">Subukan muli ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#simula"><span class="brand-mark">Aa</span><span>ANTAS</span></a><p>Isang interaktibong materyal sa Filipino para sa kolehiyo.</p><a href="#simula">Bumalik sa itaas ↑</a></footer>
+
+  <dialog id="lessonDialog">
+    <button class="dialog-close" aria-label="Isara ang aralin">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
