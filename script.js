@@ -4,96 +4,157 @@
 
 /* -------- 1. LESSON CONTENT -------- */
 const lessons = {
-  pormal: {
-    tag: 'PORMAL • PAMANTAYAN AT SINING',
-    title: 'Pambansa at Panitikan',
+  pambansa: {
+    tag: 'PAMBANSA • PAMANTAYAN',
+    title: 'Pambansa',
     body: `
-      <p>Ginagamit ang <strong>pambansang antas</strong> sa edukasyon, pamahalaan, midya, at iba pang opisyal na komunikasyon. Ito ang malawak na nauunawaan at sinusunod na pamantayan.</p>
-      <p>Ang <strong>panitikan</strong> naman ay masining, malikhain, at maaaring matalinghaga. Makikita ito sa tula, nobela, sanaysay, at talumpating pampanitikan.</p>
-      <h3>Pagkakaiba sa kilos</h3>
-      <div class="example"><b>Pambansa:</b> “Mahalagang pangalagaan ang ating mga likas na yaman.”</div>
-      <div class="example"><b>Panitikan:</b> “Ang kagubatan ang hininga ng lupang sinilangan.”</div>
-      <div class="challenge"><strong>Hamon:</strong> Sa research presentation, pambansa ang pangunahing antas. Maaaring gumamit ng panitikan sa pamagat o pambungad kung angkop sa layunin.</div>
+      <p><strong>KAHULUGAN:</strong> Ang pambansa ay antas ng wikang opisyal na kinikilala at ginagamit sa buong bansa. Ito ang karaniwang ginagamit sa paaralan, pamahalaan, balita, aklat, batas, at mga pormal na komunikasyon. Layunin nitong magkaroon ng iisang wikang mauunawaan ng mga Pilipino mula sa iba’t ibang rehiyon.</p>
+      <h3>Halimbawa</h3>
+      <div class="example">“Ang bawat mamamayan ay may tungkuling pangalagaan ang kalayaan ng ating bansa.”</div>
+      <h3>Kahulugan ng mga salita</h3>
+      <ul class="word-list">
+        <li><b>Mamamayan</b> – taong kabilang at naninirahan sa isang bansa.</li>
+        <li><b>Kalayaan</b> – karapatang kumilos at magpahayag nang walang pang-aapi.</li>
+      </ul>
     `
   },
-  barayti: {
-    tag: 'LUGAR • PANGKAT • IDENTIDAD',
-    title: 'Lalawiganin at Barayti',
+  pampanitikan: {
+    tag: 'PAMPANITIKAN • MASINING',
+    title: 'Pampanitikan',
     body: `
-      <p>Ang <strong>lalawiganin</strong> ay mga salitang ginagamit sa isang tiyak na rehiyon o pamayanan. Maaari itong may natatanging bokabularyo, punto, o paraan ng pagbuo ng pangungusap.</p>
-      <p>Mas malawak dito ang konsepto ng <strong>barayti ng wika</strong>: nagkakaroon ng baryasyon dahil sa heograpiya, pangkat panlipunan, propesyon, edad, o mismong sitwasyon.</p>
-      <h3>Hindi “maling Filipino”</h3>
-      <div class="example">Ang lokal na salita ay may sariling sistemang panlingguwistika at dalang kasaysayan. Kapag hindi ito nauunawaan ng lahat, magbigay ng katumbas o paliwanag.</div>
-      <div class="challenge"><strong>Hamon:</strong> Sa panayam sa komunidad, panatilihin ang orihinal na lokal na salita sa sipi at ipaliwanag ang kahulugan nito para sa mas malawak na mambabasa.</div>
+      <p><strong>KAHULUGAN:</strong> Ang pampanitikan ay pinakamalikhain at masining na antas ng wika. Gumagamit ito ng malalalim na salita, talinghaga, simbolismo, at iba’t ibang tayutay upang masining na maipahayag ang damdamin at kaisipan. Madalas itong ginagamit sa tula, nobela, kuwento, sanaysay, at iba pang akdang pampanitikan.</p>
+      <h3>Halimbawa</h3>
+      <div class="example">“Ang aking ina ang ilaw ng tahanan, samantalang ang aking ama ang haligi ng tahanan.”</div>
+      <h3>Kahulugan ng mga salita</h3>
+      <ul class="word-list">
+        <li><b>Ilaw ng tahanan</b> – tumutukoy sa ina na nagbibigay ng pagmamahal, gabay, at pag-aaruga sa pamilya.</li>
+        <li><b>Haligi ng tahanan</b> – tumutukoy sa ama na nagbibigay ng lakas, proteksiyon, at suporta sa pamilya.</li>
+      </ul>
     `
   },
-  impormal: {
-    tag: 'ARAW-ARAW • BARKADA • DIGITAL',
-    title: 'Kolokyal at Balbal',
+  lalawiganin: {
+    tag: 'LALAWIGANIN • PANREHIYON',
+    title: 'Lalawiganin',
     body: `
-      <p>Ang <strong>kolokyal</strong> ay natural na wikang ginagamit sa pang-araw-araw na usapan. Madalas itong pinaikli: “sandali” → “saglit/teka,” o “kumusta” → “musta.”</p>
-      <p>Ang <strong>balbal</strong> ay salitang nabubuo sa mga tiyak na pangkat o subkultura. Malikhaing-malikhaing ito at mabilis magbago, lalo na online.</p>
-      <h3>Angkop, hindi awtomatikong mali</h3>
-      <div class="example"><b>Sa group chat:</b> “Pre, send mo naman ’yung notes.”<br><b>Sa propesor:</b> “Magandang araw po. Maaari ko po bang hingin ang kopya ng lecture notes?”</div>
-      <div class="challenge"><strong>Hamon:</strong> Iisang layunin, magkaibang kausap. Ang mahusay na tagapagsalita ay marunong magpalit ng antas nang hindi nawawala ang mensahe.</div>
+      <p><strong>KAHULUGAN:</strong> Ang lalawiganin ay mga salita o paraan ng pagsasalita na ginagamit sa isang partikular na lalawigan o rehiyon. Maaari itong magkaroon ng sariling punto, tono, kahulugan, at bokabularyo. Ipinakikita nito ang pagkakaiba-iba at mayamang kultura ng bawat pamayanan sa Pilipinas.</p>
+      <h3>Halimbawa</h3>
+      <div class="example">“Pumunta kami sa kanilang balay upang dalawin ang aking gayyem.”</div>
+      <h3>Kahulugan ng mga salita</h3>
+      <ul class="word-list">
+        <li><b>Balay</b> – salitang Bisaya na nangangahulugang bahay.</li>
+        <li><b>Gayyem</b> – salitang Ilokano na nangangahulugang kaibigan.</li>
+      </ul>
     `
   },
-  teknikal: {
-    tag: 'PROPESYON • AGHAM • BATAS • MEDISINA',
-    title: 'Teknikal at Eupemismo',
+  kolokyal: {
+    tag: 'KOLOKYAL • PANG-ARAW-ARAW',
+    title: 'Kolokyal',
     body: `
-      <p>Ang <strong>teknikal</strong> (tinatawag ding <em>jargon</em>) ay mga terminong may tiyak na kahulugan sa isang larang—agham, medisina, batas, inhenyeriya, at iba pa. Hindi ito para sa lahat, kaya kailangan ng paliwanag kapag lalabas sa larangang iyon.</p>
-      <p>Ang <strong>eupemismo</strong> ay pagpapalambot ng salita para sa sensitibo, maselan, o hindi komportableng paksa. Halimbawa, “sumakabilang-buhay” kaysa “namatay.”</p>
-      <h3>Pagkakaiba sa kilos</h3>
-      <div class="example"><b>Teknikal:</b> “Hypertension ang diagnosis sa pasyente.”</div>
-      <div class="example"><b>Eupemismo:</b> “Pumanaw nang payapa ang aming lolo.”</div>
-      <div class="challenge"><strong>Hamon:</strong> Sa medikal na usapan, kailangan ang teknikal na termino para sa katumpakan. Sa pakikipag-usap sa pamilya ng pasyente, mas mainam ang eupemismo at simpleng paliwanag.</div>
+      <p><strong>KAHULUGAN:</strong> Ang kolokyal ay impormal na wikang karaniwang ginagamit sa pang-araw-araw na pakikipag-usap. Madalas itong pinaikling anyo ng mga salita o parirala upang maging mas mabilis, natural, at magaan ang usapan. Karaniwan itong ginagamit sa pakikipag-usap sa pamilya, kaibigan, at kakilala.</p>
+      <h3>Halimbawa</h3>
+      <div class="example">“Nasan na siya? Meron pa tayong mahalagang pag-uusapan.”</div>
+      <h3>Kahulugan ng mga salita</h3>
+      <ul class="word-list">
+        <li><b>Nasan</b> – pinaikling anyo ng nasaan.</li>
+        <li><b>Meron</b> – karaniwang anyo ng salitang mayroon.</li>
+      </ul>
+    `
+  },
+  balbal: {
+    tag: 'BALBAL • IMPORMAL',
+    title: 'Balbal',
+    body: `
+      <p><strong>KAHULUGAN:</strong> Ang balbal ay pinakaimpormal na antas ng wika. Binubuo ito ng mga salitang likha o binago ng isang pangkat, komunidad, o henerasyon. Madalas itong ginagamit ng magkakaibigan at kabataan upang ipakita ang pagiging malapit, pagiging malikhain, o pagkakakilanlan ng kanilang grupo. Mabilis itong nagbabago dahil naiimpluwensiyahan ito ng uso, social media, at kulturang popular.</p>
+      <h3>Halimbawa</h3>
+      <div class="example">“Kasama ng aking tropa ang kanyang jowa sa panonood ng aming paboritong lodi.”</div>
+      <h3>Kahulugan ng mga salita</h3>
+      <ul class="word-list">
+        <li><b>Tropa</b> – grupo ng malalapit na kaibigan.</li>
+        <li><b>Jowa</b> – kasintahan o romantikong karelasyon.</li>
+        <li><b>Lodi</b> – baligtad na anyo ng idolo; taong hinahangaan o tinitingala.</li>
+      </ul>
     `
   }
 };
 
-/* -------- 2. QUIZ -------- */
+/* -------- 2. QUIZ (20 tanong, A-E) -------- */
 const quiz = [
-  { s:'Email sa propesor', q:'Alin ang pinakaangkop na pambungad?',
-    a:['Uy Prof, may tanong ako.','Magandang araw po, Propesor. Nais ko pong linawin…','Lodi, pa-clarify naman.','Ano ba kasi ito?'],
-    c:1, e:'Pormal at magalang angkop sa akademikong komunikasyon.' },
-  { s:'Tula para sa klase', q:'Anong antas ang nangingibabaw sa linyang “Humahalik ang liwanag sa tahimik na dagat”?',
-    a:['Pambansa','Panitikan','Kolokyal','Balbal'], c:1,
-    e:'Masining at matalinghaga ang pahayag, kaya panitikan.' },
-  { s:'Usapang magkakaibigan', q:'“Teka lang, parating na ako.” Ito ay halimbawa ng…',
-    a:['Kolokyal','Panitikan','Teknikal','Pambansa lamang'], c:0,
-    e:'Natural at pinaikling anyo ito sa pang-araw-araw na usapan.' },
-  { s:'Panayam sa komunidad', q:'May lokal na salitang hindi alam ng mambabasa. Ano ang pinakamainam?',
-    a:['Tanggalin agad ang salita','Tawaging maling Filipino','Panatilihin at lagyan ng paliwanag','Palitan lahat ng balbal'], c:2,
-    e:'Napananatili nito ang identidad habang nagiging malinaw sa mas malawak na mambabasa.' },
-  { s:'Research paper', q:'Alin ang dapat iwasan sa pangunahing talakay?',
-    a:['Malinaw na terminolohiya','Mga sanggunian','Hindi ipinaliwanag na balbal','Pambansang antas'], c:2,
-    e:'Maaaring malabo at hindi angkop ang di-ipinaliwanag na balbal sa akademikong teksto.' },
-  { s:'Online community', q:'Bakit mabilis magbago ang mga salitang balbal?',
-    a:['Bawal ang mga ito','Nakaugnay sa malikhaing gamit ng pangkat at uso','Iisa lamang ang kahulugan nila','Ginagamit lang sa aklat'], c:1,
-    e:'Hinuhubog ang balbal ng pangkat, uso, at mabilis na palitan online.' },
-  { s:'Dalawang magkaibang kausap', q:'Ano ang tawag sa sadyang pagpapalit ng paraan ng pagsasalita ayon sa kausap o sitwasyon?',
-    a:['Paglimot sa wika','Pag-aangkop o code-switching','Maling gramatika','Pagsasalin lamang'], c:1,
-    e:'Ang pag-aangkop—at kung wika ang pinapalitan, code-switching—ay estratehiyang komunikatibo.' },
-  { s:'Pangkalahatang prinsipyo', q:'Paano pinakamahusay sinusuri ang antas ng wika?',
-    a:['Kung alin ang pinakamahabang salita','Kung alin ang pinakamoderno','Kung angkop sa kausap, layunin, lugar, at daluyan','Kung purong Filipino lamang'], c:2,
-    e:'Ang konteksto ang sentro ng mahusay at responsableng pagpili ng wika.' }
+  { s:'Pormal na komunikasyon', q:'Anong antas ng wika ang karaniwang ginagamit sa mga aklat-aralin, opisyal na dokumento, at pormal na komunikasyon?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Ang Pambansa ang pamantayang wikang ginagamit sa pormal na komunikasyon.' },
+  { s:'Tula at tayutay', q:'“Ang kanyang mga mata ay tila mga bituing nagniningning sa madilim na kalangitan.” Anong antas ng wika ang ginamit?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Gumagamit ito ng tayutay (simile) at masining na paglalarawan—katangian ng Pampanitikan.' },
+  { s:'Rehiyonal na salita', q:'Ang mga salitang ginagamit lamang o higit na kilala sa isang partikular na lalawigan o rehiyon ay nabibilang sa anong antas ng wika?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Ang Lalawiganin ay wikang natatangi sa isang rehiyon o lalawigan.' },
+  { s:'Pinaikling salita', q:'“Nasan na ang kapatid mo?” Ang salitang “nasan,” na pinaikling anyo ng “nasaan,” ay halimbawa ng anong antas ng wika?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Ang Kolokyal ay madalas pinaikli o impormal na anyo ng mga salita sa araw-araw.' },
+  { s:'Barkada', q:'“Ang lakas ng trip mo, pre!” Anong antas ng wika ang higit na makikita sa salitang “pre”?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Ang “pre” ay balbal na paraan ng pagtawag sa kaibigan.' },
+  { s:'Opisyal na pahayag', q:'“Ang pamahalaan ay nagpatupad ng bagong programa para sa mga mag-aaral.” Anong antas ng wika ang ginamit sa pangungusap?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—ginagamit sa opisyal at pormal na komunikasyon.' },
+  { s:'Masining na pagpapahayag', q:'Alin ang antas ng wikang gumagamit ng masining, malalim, at matatalinghagang pagpapahayag?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Ang Pampanitikan ang pinakamasining at pinakamalikhaing antas ng wika.' },
+  { s:'Ilocano', q:'“Mangan tayon!” na nangangahulugang “Kumain na tayo!” sa Ilocano ay halimbawa ng anong antas ng wika?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—nagmumula ito sa isang partikular na rehiyon (Ilocos).' },
+  { s:'Kaswal na pag-uusap', q:'“Teka lang, andiyan na ’ko!” Anong antas ng wika ang nangingibabaw dahil sa pinaikli at kaswal na mga salita?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Kolokyal—pinaikli at natural sa araw-araw na usapan.' },
+  { s:'Kabataan', q:'“Lodi talaga kita! Ang galing mo!” Ang salitang “lodi” ay halimbawa ng anong antas ng wika?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—binago ang salitang “idolo” sa baliktad na anyo.' },
+  { s:'Paglalarawan', q:'Alin sa sumusunod ang pinakamainam na paglalarawan sa Pambansang wika?',
+    a:['Wikang karaniwang ginagamit sa pormal at malawakang komunikasyon','Wikang ginagamit lamang sa isang lalawigan','Wikang binubuo lamang ng mga salitang uso','Wikang ginagamit lamang sa tula','Wikang ginagamit lamang ng magkakaibigan'], c:0,
+    e:'Ang Pambansa ay malawakan at pormal na ginagamit sa buong bansa.' },
+  { s:'Tayutay', q:'“Ang kanyang puso ay dinurog ng mapait na kapalaran.” Anong antas ng wika ang ipinakikita ng masining na pagpapahayag?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—gumagamit ito ng metapora at masining na paglalarawan.' },
+  { s:'Iba-ibang rehiyon', q:'Aling antas ng wika ang maaaring magkaroon ng mga salitang naiiba ang kahulugan o gamit depende sa rehiyon?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—may iba’t ibang kahulugan ang mga salita depende sa rehiyon.' },
+  { s:'Pinaikli', q:'“Pa’no tayo pupunta roon?” Ang salitang “pa’no” mula sa “paano” ay halimbawa ng anong antas ng wika?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Kolokyal—pinaikling anyo ng “paano.”' },
+  { s:'Slang', q:'“Astig ng bagong sapatos mo!” Ang salitang “astig” ay karaniwang halimbawa ng anong antas ng wika?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—impormal at makabagong salitang ginagamit ng kabataan.' },
+  { s:'Malikhaing akda', q:'Aling antas ng wika ang karaniwang makikita sa mga tula, nobela, maikling kuwento, at iba pang malikhaing akda?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—masining at malikhain ang gamit ng wika.' },
+  { s:'Kolokyal', q:'Alin sa sumusunod ang halimbawa ng Kolokyal?',
+    a:['“Nandito na ’ko.”','“Ang buhay ay isang mahabang paglalakbay.”','“Ang edukasyon ay mahalaga sa pag-unlad ng bansa.”','“Lodi kita!”','“Mangan tayo.”'], c:0,
+    e:'Ang “Nandito na ’ko.” ay pinaikling anyo ng “Narito na ako.”' },
+  { s:'Balbal', q:'Alin sa sumusunod ang halimbawa ng Balbal?',
+    a:['Paaralan','Marikit','Tropa','Nasaan','Pamahalaan'], c:2,
+    e:'Ang “tropa” ay balbal na salita para sa grupo ng magkakaibigan.' },
+  { s:'Kahalagahan', q:'Bakit mahalagang malaman ang iba’t ibang antas ng wika?',
+    a:['Upang laging gumamit ng malalalim na salita','Upang maiangkop ang paraan ng pagsasalita sa kausap at sitwasyon','Upang maiwasan ang paggamit ng impormal na wika sa lahat ng pagkakataon','Upang gumamit lamang ng Pambansang wika','Upang palaging paikliin ang mga salita'], c:1,
+    e:'Ang kahalagahan ay ang pag-aangkop ng wika sa kausap at sitwasyon.' },
+  { s:'Konteksto', q:'Isang estudyante ang gumamit ng pormal na Filipino habang nag-uulat, ngunit gumamit ng “tropa” at iba pang balbal nang kausapin ang mga kaibigan. Ano ang ipinakikita nito?',
+    a:['Iisa lamang ang maaaring gamiting antas ng wika ng isang tao','Nagbabago ang antas ng wika ayon sa konteksto at kausap','Balbal lamang ang dapat gamitin sa paaralan','Hindi maaaring pagsabayin ang iba’t ibang antas ng wika','Pampanitikan ang lahat ng impormal na salita'], c:1,
+    e:'Ang antas ng wika ay nagbabago ayon sa konteksto at kausap.' }
 ];
 
 /* -------- 3. GLOSSARY DATA -------- */
 const glossary = [
-  { t:'Antas ng Wika', e:'Language level / register', d:'Antas ng pormalidad at paraan ng paggamit ng wika ayon sa sitwasyon, kausap, lugar, at daluyan.' },
-  { t:'Pambansa', e:'National language', d:'Pamantayang anyo ng wika; ginagamit sa edukasyon, pamahalaan, midya.' },
-  { t:'Panitikan', e:'Literature', d:'Masining at malikhaing paggamit ng wika; tula, nobela, sanaysay.' },
-  { t:'Lalawiganin', e:'Regional', d:'Salitang ginagamit sa isang tiyak na rehiyon o pamayanan.' },
-  { t:'Kolokyal', e:'Colloquial', d:'Natural, pinaikling anyo ng wika sa pang-araw-araw na usapan.' },
-  { t:'Balbal', e:'Slang', d:'Salitang nabubuo sa pangkat o subkultura; mabilis magbago.' },
-  { t:'Teknikal / Jargon', e:'Technical / Jargon', d:'Terminong may tiyak na kahulugan sa isang propesyon o larang.' },
-  { t:'Eupemismo', e:'Euphemism', d:'Pagpapalambot ng salita para sa sensitibo o maselang paksa.' },
-  { t:'Barayti', e:'Variety', d:'Baryasyon ng wika dahil sa heograpiya, pangkat, edad, o sitwasyon.' },
+  { t:'Pambansa', e:'National language', d:'Antas ng wikang opisyal na kinikilala at ginagamit sa buong bansa. Gamit sa paaralan, pamahalaan, balita, aklat, at pormal na komunikasyon.' },
+  { t:'Pampanitikan', e:'Literary', d:'Pinakamalikhain at masining na antas ng wika. Gumagamit ng talinghaga, simbolismo, at tayutay. Madalas sa tula, nobela, at sanaysay.' },
+  { t:'Lalawiganin', e:'Regional', d:'Mga salita o paraan ng pagsasalita na natatangi sa isang partikular na lalawigan o rehiyon. May sariling punto, tono, at bokabularyo.' },
+  { t:'Kolokyal', e:'Colloquial', d:'Impormal na wikang karaniwang ginagamit sa pang-araw-araw na usapan. Madalas pinaikli (nasan, meron, pa’no).' },
+  { t:'Balbal', e:'Slang', d:'Pinakaimpormal na antas ng wika. Mga salitang likha o binago ng isang pangkat o henerasyon. Mabilis magbago dahil sa uso at social media.' },
+  { t:'Register', e:'Register', d:'Antas ng pormalidad na pinipili ayon sa sitwasyon at kausap.' },
+  { t:'Barayti', e:'Variety', d:'Baryasyon ng wika dahil sa heograpiya, pangkat panlipunan, edad, o sitwasyon.' },
   { t:'Idyolek', e:'Idiolect', d:'Natatanging paraan ng pagsasalita ng isang indibidwal.' },
   { t:'Sosyolek', e:'Sociolect', d:'Barayti ng wika ng isang partikular na pangkat panlipunan.' },
-  { t:'Register', e:'Register', d:'Antas ng pormalidad na pinipili ayon sa sitwasyon.' },
+  { t:'Tayutay', e:'Figure of speech', d:'Masining na paraan ng pagpapahayag gamit ang paghahambing, pagmamalabis, at iba pa.' },
+  { t:'Talinghaga', e:'Metaphor / figure', d:'Matalinghagang pahayag na may di-literal na kahulugan.' },
+  { t:'Simbolismo', e:'Symbolism', d:'Paggamit ng bagay o tanda upang kumatawan sa mas malalim na kahulugan.' },
   { t:'Code-switching', e:'Code-switching', d:'Pagpapalit ng wika o barayti sa loob ng isang usapan.' },
   { t:'Pag-aangkop', e:'Accommodation', d:'Pagsasaayos ng pananalita ayon sa kausap o sitwasyon.' },
   { t:'Diskurso', e:'Discourse', d:'Malawak na yunit ng wika—pag-uusap, teksto, o talumpati.' },
@@ -104,356 +165,490 @@ const glossary = [
   { t:'Semantika', e:'Semantics', d:'Pag-aaral ng kahulugan ng salita at pangungusap.' }
 ];
 
-/* -------- 4. DOM SHORTCUTS -------- */
+/* -------- 4. FUN FACTS DATA -------- */
+const funFacts = [
+  { n:'01', t:'🗣️ Nag-iiba ang ating antas ng wika depende sa kausap.', d:'Maaaring pormal kang magsalita kapag kaharap ang guro o isang opisyal, ngunit nagiging mas kaswal kapag kausap ang malalapit na kaibigan. Ipinapakita nito na natural nating inaangkop ang wika sa sitwasyon.' },
+  { n:'02', t:'🌱 Buhay at patuloy na nagbabago ang wika.', d:'Hindi nananatiling pareho ang paraan ng pagsasalita ng mga tao. Habang nagbabago ang kultura, teknolohiya, at lipunan, may mga bagong salitang nabubuo at may mga lumang salitang bihira nang gamitin.' },
+  { n:'03', t:'📱 Malaki ang impluwensiya ng social media sa Balbal.', d:'Maraming salitang balbal ang mabilis na kumakalat dahil sa Facebook, TikTok, X, at iba pang online platforms. Dahil dito, ang isang bagong ekspresyon ay maaaring maging popular sa napakaikling panahon.' },
+  { n:'04', t:'🇵🇭 Ang Pambansa ay ginagamit upang mas madaling magkaunawaan ang mga Pilipino.', d:'Karaniwan itong makikita at maririnig sa paaralan, pamahalaan, balita, at iba pang pormal na komunikasyon. Layunin nitong maging malinaw at madaling maunawaan ng mas nakararami.' },
+  { n:'05', t:'📖 Masining ang Pampanitikan.', d:'Hindi lamang literal na kahulugan ng mga salita ang mahalaga sa Pampanitikan. Maaari itong gumamit ng tayutay, simbolismo, at matatalinghagang pahayag upang gawing mas makulay at makapangyarihan ang pagpapahayag.' },
+  { n:'06', t:'🗺️ Ang Lalawiganin ay nagpapakita ng pagkakaiba-iba ng kultura sa Pilipinas.', d:'May mga salita at paraan ng pagsasalita na karaniwan sa isang partikular na rehiyon ngunit maaaring hindi agad maunawaan sa ibang lugar. Kaya ang Lalawiganin ay mahalagang bahagi rin ng pagkakakilanlan ng isang pamayanan.' },
+  { n:'07', t:'💬 Ang Kolokyal ay madalas na pinaikli.', d:'Sa pang-araw-araw na pag-uusap, natural nating pinaiikli ang ilang salita. Halimbawa, ang “nasaan” ay maaaring maging “nasan,” at ang “sa akin” ay nagiging “sa\'kin.” Ginagawa nitong mas mabilis at natural ang kaswal na usapan.' },
+  { n:'08', t:'😎 Ang salitang Balbal ay maaaring mawala sa uso.', d:'Dahil mabilis magbago ang mga uso, ang isang salitang sikat ngayon ay maaaring hindi na gaanong gamitin pagkalipas ng ilang taon. Maaari rin itong mapalitan ng bagong salitang likha ng susunod na henerasyon.' },
+  { n:'09', t:'🔄 Maaaring magpalit-palit ng antas ng wika ang isang tao sa loob lamang ng isang araw.', d:'Halimbawa, maaaring gumamit ang isang estudyante ng Pambansa habang nag-uulat, Pampanitikan habang nagsusulat ng tula, Kolokyal habang kausap ang kaklase, at Balbal habang nakikipagbiruan sa barkada.' },
+  { n:'10', t:'✨ Walang iisang antas ng wika na angkop sa lahat ng pagkakataon.', d:'Ang mahalaga ay ang pagiging angkop ng wika sa konteksto. Ang Balbal ay maaaring natural sa barkadahan ngunit hindi angkop sa isang pormal na akademikong papel. Samantala, ang napakapormal na pananalita ay maaaring maging hindi natural sa simpleng kuwentuhan.' }
+];
+
+/* -------- 5. RESEARCHERS DATA -------- */
+const researchers = {
+  m1: { name: 'Pangalan ng Miyembro 1', role: 'Punong Mananaliksik', photo: 'assets/picture.png', color: '#ffc93c',
+    bio: 'Pinamunuan ang buong pananaliksik—mula sa pagpili ng paksa, pagbuo ng balangkas, hanggang sa huling pagsusuri ng nilalaman.',
+    details: [['Papel','Lead Researcher'],['Kontribusyon','Pananaliksik, balangkas, pagsusuri'],['Espesyalisasyon','Metodolohiya at teorya ng wika'],['Email','email1@example.com']] },
+  m2: { name: 'Pangalan ng Miyembro 2', role: 'Mananaliksik sa Wika', photo: 'assets/picture.png', color: '#51c7b8',
+    bio: 'Tumutok sa teorya ng wika, mga barayti, at sosyolingguwistikang konsepto.',
+    details: [['Papel','Language Researcher'],['Kontribusyon','Teorya, barayti, halimbawa'],['Espesyalisasyon','Sosyolingguwistika'],['Email','email2@example.com']] },
+  m3: { name: 'Pangalan ng Miyembro 3', role: 'Mananaliksik sa Nilalaman', photo: 'assets/picture.png', color: '#ee5d46',
+    bio: 'Nagsulat at nag-edit ng mga paliwanag, halimbawa, at hamon sa bawat aralin.',
+    details: [['Papel','Content Writer & Editor'],['Kontribusyon','Pagsusulat, pag-e-edit'],['Espesyalisasyon','Akademikong Filipino'],['Email','email3@example.com']] },
+  m4: { name: 'Pangalan ng Miyembro 4', role: 'Mananaliksik sa Disenyo', photo: 'assets/picture.png', color: '#3678e5',
+    bio: 'Nagdisenyo ng mga larawan, layout, at interaksyon ng pahina.',
+    details: [['Papel','UI/UX Designer'],['Kontribusyon','Disenyo, layout, visual identity'],['Espesyalisasyon','Web design at illustration'],['Email','email4@example.com']] },
+  m5: { name: 'Pangalan ng Miyembro 5', role: 'Mananaliksik sa Teknolohiya', photo: 'assets/picture.png', color: '#8b5cf6',
+    bio: 'Nagtayo ng interactive na bahagi ng materyal gamit ang HTML, CSS, at JavaScript.',
+    details: [['Papel','Web Developer'],['Kontribusyon','Frontend, interactivity, testing'],['Espesyalisasyon','HTML, CSS, JavaScript'],['Email','email5@example.com']] }
+};
+
+/* -------- 6. DOM SHORTCUTS -------- */
 const $  = (s, p=document) => p.querySelector(s);
 const $$ = (s, p=document) => [...p.querySelectorAll(s)];
 
-/* -------- 5. LESSON DIALOG (with focus trap) -------- */
+/* -------- 7. LESSON DIALOG -------- */
 const dialog  = $('#lessonDialog');
 const dlgContent = $('#dialogContent');
 let lastFocused = null;
 
-$$('.lesson-card').forEach(btn => btn.addEventListener('click', () => {
-  const l = lessons[btn.dataset.lesson];
-  if (!l) return;
-  dlgContent.innerHTML = `
-    <article class="dialog-inner">
-      <span class="tag">${l.tag}</span>
-      <h2 id="dialogTitle">${l.title}</h2>
-      ${l.body}
-    </article>`;
-  lastFocused = document.activeElement;
-  dialog.showModal();
-  setTimeout(() => $('.dialog-close').focus(), 30);
-}));
+if (dialog && dlgContent) {
+  $$('.lesson-card').forEach(btn => btn.addEventListener('click', () => {
+    const l = lessons[btn.dataset.lesson];
+    if (!l) return;
+    dlgContent.innerHTML = `
+      <article class="dialog-inner">
+        <span class="tag">${l.tag}</span>
+        <h2 id="dialogTitle">${l.title}</h2>
+        ${l.body}
+      </article>`;
+    lastFocused = document.activeElement;
+    dialog.showModal();
+    setTimeout(() => $('.dialog-close', dialog)?.focus(), 30);
+  }));
 
-$('.dialog-close').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
-dialog.addEventListener('close', () => { if (lastFocused) lastFocused.focus(); });
+  $('.dialog-close', dialog)?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => { if (lastFocused) lastFocused.focus(); });
 
-// Focus trap inside dialog
-dialog.addEventListener('keydown', e => {
-  if (e.key !== 'Tab') return;
-  const focusables = $$('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])', dialog)
-    .filter(el => !el.disabled && el.offsetParent !== null);
-  if (!focusables.length) return;
-  const first = focusables[0], last = focusables[focusables.length - 1];
-  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-});
-
-/* -------- 6. QUIZ ENGINE -------- */
-let index = 0, score = 0, chosen = false;
-let timerId = null, timeLeft = 60;
-const TIMER_SECONDS = 60;
-
-const count       = $('#quizCount');
-const bar         = $('#progressBar');
-const scenarioEl  = $('#scenario');
-const questionEl  = $('#question');
-const answersEl   = $('#answers');
-const feedbackEl  = $('#feedback');
-const nextBtn     = $('#nextBtn');
-const scorePrev   = $('#scorePreview');
-const timerEl     = $('#timerDisplay');
-const timerToggle = $('#timerToggle');
-const resultCard  = $('#resultCard');
-const quizCard    = $('#quizCard');
-
-function renderQuestion() {
-  chosen = false;
-  nextBtn.disabled = true;
-  feedbackEl.textContent = '';
-  const item = quiz[index];
-
-  count.textContent = `Tanong ${index + 1} sa ${quiz.length}`;
-  bar.style.width   = `${((index + 1) / quiz.length) * 100}%`;
-  scenarioEl.textContent = item.s;
-  questionEl.textContent = item.q;
-  answersEl.innerHTML = '';
-
-  item.a.forEach((ans, i) => {
-    const b = document.createElement('button');
-    b.className = 'answer';
-    b.innerHTML = `<span class="key">${String.fromCharCode(65 + i)}</span><span>${ans}</span>`;
-    b.addEventListener('click', () => selectAnswer(i, b));
-    answersEl.appendChild(b);
+  dialog.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const focusables = $$('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])', dialog)
+      .filter(el => !el.disabled && el.offsetParent !== null);
+    if (!focusables.length) return;
+    const first = focusables[0], last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
-
-  if (timerToggle.checked) startTimer();
-  else stopTimer();
 }
 
-function selectAnswer(i, btn) {
-  if (chosen) return;
-  chosen = true;
-  stopTimer();
-  const item = quiz[index];
+/* -------- 8. GLOSSARY DIALOG -------- */
+const glossaryDialog  = $('#glossaryDialog');
+const glossaryContent = $('#glossaryContent');
+let lastGlossaryFocused = null;
 
-  $$('.answer').forEach((el, j) => {
-    el.disabled = true;
-    if (j === item.c) el.classList.add('correct');
+if (glossaryDialog && glossaryContent) {
+  $('.dialog-close', glossaryDialog)?.addEventListener('click', () => glossaryDialog.close());
+  glossaryDialog.addEventListener('click', e => { if (e.target === glossaryDialog) glossaryDialog.close(); });
+  glossaryDialog.addEventListener('close', () => { if (lastGlossaryFocused) lastGlossaryFocused.focus(); });
+  glossaryDialog.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const focusables = $$('button, [href], input, [tabindex]:not([tabindex="-1"])', glossaryDialog)
+      .filter(el => !el.disabled && el.offsetParent !== null);
+    if (!focusables.length) return;
+    const first = focusables[0], last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
+}
 
-  if (i === item.c) {
-    score++;
-    feedbackEl.innerHTML = `<strong>Tama.</strong> ${item.e}`;
-  } else {
-    btn.classList.add('wrong');
-    feedbackEl.innerHTML = `<strong>Hindi pa.</strong> ${item.e}`;
+/* -------- 9. MEMBER DIALOG -------- */
+const memberDialog  = $('#memberDialog');
+const memberContent = $('#memberContent');
+let lastFocusedMember = null;
+
+if (memberDialog && memberContent) {
+  $$('.researcher-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const data = researchers[card.dataset.member];
+      if (!data) return;
+      memberContent.innerHTML = `
+        <div class="member-dialog-inner">
+          <div class="member-photo-large" style="--av:${data.color}">
+            <img src="${data.photo}" alt="Litrato ni ${data.name}">
+          </div>
+          <div class="member-content-body">
+            <span class="member-tag">${data.role}</span>
+            <h2 id="memberName">${data.name}</h2>
+            <p class="member-bio">${data.bio}</p>
+            <ul class="member-details">
+              ${data.details.map(([k, v]) => `<li><span>${k}</span><strong>${v}</strong></li>`).join('')}
+            </ul>
+          </div>
+        </div>`;
+      lastFocusedMember = document.activeElement;
+      memberDialog.showModal();
+      setTimeout(() => memberDialog.querySelector('.dialog-close')?.focus(), 30);
+    });
+  });
+  memberDialog.querySelector('.dialog-close')?.addEventListener('click', () => memberDialog.close());
+  memberDialog.addEventListener('click', e => { if (e.target === memberDialog) memberDialog.close(); });
+  memberDialog.addEventListener('close', () => { if (lastFocusedMember) lastFocusedMember.focus(); });
+}
+
+/* -------- 10. QUIZ ENGINE -------- */
+const quizCard = $('#quizCard');
+if (quizCard) {
+  let index = 0, score = 0, chosen = false;
+  let timerId = null, timeLeft = 60;
+  const TIMER_SECONDS = 60;
+
+  const count       = $('#quizCount');
+  const bar         = $('#progressBar');
+  const scenarioEl  = $('#scenario');
+  const questionEl  = $('#question');
+  const answersEl   = $('#answers');
+  const feedbackEl  = $('#feedback');
+  const nextBtn     = $('#nextBtn');
+  const scorePrev   = $('#scorePreview');
+  const timerEl     = $('#timerDisplay');
+  const timerToggle = $('#timerToggle');
+  const resultCard  = $('#resultCard');
+
+  function renderQuestion() {
+    chosen = false;
+    nextBtn.disabled = true;
+    feedbackEl.textContent = '';
+    const item = quiz[index];
+
+    count.textContent = `Tanong ${index + 1} sa ${quiz.length}`;
+    bar.style.width   = `${((index + 1) / quiz.length) * 100}%`;
+    scenarioEl.textContent = item.s;
+    questionEl.textContent = item.q;
+    answersEl.innerHTML = '';
+
+    item.a.forEach((ans, i) => {
+      const b = document.createElement('button');
+      b.className = 'answer';
+      b.innerHTML = `<span class="key">${String.fromCharCode(65 + i)}</span><span>${ans}</span>`;
+      b.addEventListener('click', () => selectAnswer(i, b));
+      answersEl.appendChild(b);
+    });
+
+    if (timerToggle.checked) startTimer();
+    else stopTimer();
   }
-  nextBtn.disabled = false;
-  scorePrev.textContent = score;
-  saveProgress();
-}
 
-function startTimer() {
-  stopTimer();
-  timeLeft = TIMER_SECONDS;
-  timerEl.hidden = false;
-  timerEl.textContent = `${timeLeft}s`;
-  timerId = setInterval(() => {
-    timeLeft--;
+  function selectAnswer(i, btn) {
+    if (chosen) return;
+    chosen = true;
+    stopTimer();
+    const item = quiz[index];
+    $$('.answer').forEach((el, j) => {
+      el.disabled = true;
+      if (j === item.c) el.classList.add('correct');
+    });
+    if (i === item.c) { score++; feedbackEl.innerHTML = `<strong>Tama.</strong> ${item.e}`; }
+    else { btn.classList.add('wrong'); feedbackEl.innerHTML = `<strong>Hindi pa.</strong> ${item.e}`; }
+    nextBtn.disabled = false;
+    scorePrev.textContent = score;
+    saveProgress();
+  }
+
+  function startTimer() {
+    stopTimer();
+    timeLeft = TIMER_SECONDS;
+    timerEl.hidden = false;
     timerEl.textContent = `${timeLeft}s`;
-    timerEl.classList.toggle('warn', timeLeft <= 10);
-    if (timeLeft <= 0) {
-      stopTimer();
-      if (!chosen) {
-        const item = quiz[index];
-        $$('.answer').forEach((el, j) => {
-          el.disabled = true;
-          if (j === item.c) el.classList.add('correct');
-        });
-        chosen = true;
-        feedbackEl.innerHTML = `<strong>Tapos na ang oras.</strong> ${item.e}`;
-        nextBtn.disabled = false;
+    timerId = setInterval(() => {
+      timeLeft--;
+      timerEl.textContent = `${timeLeft}s`;
+      timerEl.classList.toggle('warn', timeLeft <= 10);
+      if (timeLeft <= 0) {
+        stopTimer();
+        if (!chosen) {
+          const item = quiz[index];
+          $$('.answer').forEach((el, j) => {
+            el.disabled = true;
+            if (j === item.c) el.classList.add('correct');
+          });
+          chosen = true;
+          feedbackEl.innerHTML = `<strong>Tapos na ang oras.</strong> ${item.e}`;
+          nextBtn.disabled = false;
+        }
       }
-    }
-  }, 1000);
-}
-function stopTimer() { clearInterval(timerId); timerId = null; }
-
-function showResult() {
-  quizCard.hidden = true;
-  resultCard.hidden = false;
-  $('#finalScore').textContent = score;
-  const pct = score / quiz.length;
-  $('#resultTitle').textContent = pct >= .875 ? 'Mahusay kang bumasa ng konteksto!' :
-                                  pct >= .625 ? 'Maganda ang pundasyon mo.' :
-                                                'Balikan natin ang mga module.';
-  $('#resultText').textContent  = pct >= .875 ? 'Kaya mong iugnay ang antas ng wika sa tunay na sitwasyong komunikatibo.' :
-                                  pct >= .625 ? 'Malinaw na sa iyo ang karamihan ng konsepto. Balikan ang paliwanag sa mga tanong na hindi nakuha.' :
-                                                'I-click muli ang mga larawang-aralin at ituon ang pansin sa kausap, layunin, lugar, at daluyan.';
-
-  if (pct >= .875) fireConfetti();
-  saveProgress();
-  resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-nextBtn.addEventListener('click', () => {
-  index++;
-  index < quiz.length ? renderQuestion() : showResult();
-});
-
-$('#restartBtn').addEventListener('click', () => {
-  index = 0; score = 0;
-  scorePrev.textContent = '—';
-  resultCard.hidden = true;
-  quizCard.hidden   = false;
-  renderQuestion();
-});
-
-/* -------- 7. SHARE RESULT -------- */
-const shareBtn = $('#shareBtn');
-if (navigator.share) {
-  shareBtn.hidden = false;
-  shareBtn.addEventListener('click', () => {
-    navigator.share({
-      title: 'Antas ng Wika — Pagsusulit',
-      text: `Nakuha ko ang ${score}/8 sa pagsusulit tungkol sa Antas ng Wika!`,
-      url: location.href
-    }).catch(() => {});
-  });
-}
-
-/* -------- 8. KEYBOARD SHORTCUTS -------- */
-document.addEventListener('keydown', e => {
-  if (dialog.open) return;
-  if (quizCard.hidden) return;
-  const tag = document.activeElement.tagName;
-  if (['INPUT','TEXTAREA','SELECT'].includes(tag)) return;
-
-  const k = e.key.toLowerCase();
-  const map = { a:0, b:1, c:2, d:3 };
-  if (k in map) {
-    const btns = $$('.answer');
-    if (btns[map[k]] && !btns[map[k]].disabled) btns[map[k]].click();
+    }, 1000);
   }
-  if (e.key === 'Enter' && !nextBtn.disabled) nextBtn.click();
-});
+  function stopTimer() { clearInterval(timerId); timerId = null; }
 
-/* -------- 9. PROGRESS PERSISTENCE -------- */
-const STORAGE_KEY = 'antas_wika_progress_v1';
-function saveProgress() {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ score, index, ts: Date.now() }));
-  } catch {}
-}
-function loadProgress() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return;
-    const d = JSON.parse(raw);
-    if (d && typeof d.score === 'number' && d.score > 0) {
-      const saved = $('#savedScore');
-      saved.hidden = false;
-      saved.textContent = `Huling puntos: ${d.score}/8 (${new Date(d.ts).toLocaleDateString('fil-PH')})`;
+  function showResult() {
+    quizCard.hidden = true;
+    resultCard.hidden = false;
+    $('#finalScore').textContent = score;
+    const pct = score / quiz.length;
+    $('#resultTitle').textContent = pct >= .875 ? 'Mahusay kang bumasa ng konteksto!' :
+                                    pct >= .625 ? 'Maganda ang pundasyon mo.' :
+                                                  'Balikan natin ang mga module.';
+    $('#resultText').textContent  = pct >= .875 ? 'Kaya mong iugnay ang antas ng wika sa tunay na sitwasyong komunikatibo.' :
+                                    pct >= .625 ? 'Malinaw na sa iyo ang karamihan ng konsepto. Balikan ang paliwanag sa mga tanong na hindi nakuha.' :
+                                                  'I-click muli ang mga larawang-aralin at ituon ang pansin sa kausap, layunin, lugar, at sitwasyon.';
+    if (pct >= .875) fireConfetti();
+    saveProgress();
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index++;
+    index < quiz.length ? renderQuestion() : showResult();
+  });
+
+  $('#restartBtn').addEventListener('click', () => {
+    index = 0; score = 0;
+    scorePrev.textContent = '—';
+    resultCard.hidden = true;
+    quizCard.hidden   = false;
+    renderQuestion();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (dialog?.open || memberDialog?.open || glossaryDialog?.open) return;
+    if (quizCard.hidden) return;
+    const tag = document.activeElement.tagName;
+    if (['INPUT','TEXTAREA','SELECT'].includes(tag)) return;
+    const k = e.key.toLowerCase();
+    const map = { a:0, b:1, c:2, d:3, e:4 };
+    if (k in map) {
+      const btns = $$('.answer');
+      if (btns[map[k]] && !btns[map[k]].disabled) btns[map[k]].click();
     }
-  } catch {}
-}
-loadProgress();
+    if (e.key === 'Enter' && !nextBtn.disabled) nextBtn.click();
+  });
 
-/* -------- 10. NAV / MENU / THEME / ACTIVE LINK -------- */
+  const shareBtn = $('#shareBtn');
+  if (navigator.share) {
+    shareBtn.hidden = false;
+    shareBtn.addEventListener('click', () => {
+      navigator.share({
+        title: 'Antas ng Wika — Pagsusulit',
+        text: `Nakuha ko ang ${score}/20 sa pagsusulit tungkol sa Antas ng Wika!`,
+        url: location.href
+      }).catch(() => {});
+    });
+  }
+
+  const STORAGE_KEY = 'antas_wika_progress_v2';
+  function saveProgress() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ score, index, ts: Date.now() })); } catch {}
+  }
+  function loadProgress() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const d = JSON.parse(raw);
+      if (d && typeof d.score === 'number' && d.score > 0) {
+        const saved = $('#savedScore');
+        saved.hidden = false;
+        saved.textContent = `Huling puntos: ${d.score}/20 (${new Date(d.ts).toLocaleDateString('fil-PH')})`;
+      }
+    } catch {}
+  }
+  loadProgress();
+
+  if (document.modelContext?.registerTool) {
+    const ac = new AbortController();
+    Promise.resolve(document.modelContext.registerTool({
+      name: 'start_antas_ng_wika_quiz',
+      title: 'Simulan ang pagsusulit',
+      description: 'Buksan at i-reset ang pagsusulit tungkol sa Antas ng Wika.',
+      inputSchema: { type:'object', properties:{}, additionalProperties:false },
+      annotations: { readOnlyHint:false, untrustedContentHint:false },
+      execute() {
+        index = 0; score = 0;
+        scorePrev.textContent = '—';
+        resultCard.hidden = true;
+        quizCard.hidden = false;
+        renderQuestion();
+        $('#pagsusulit').scrollIntoView();
+        return { status:'started', questions: quiz.length };
+      }
+    }, { signal: ac.signal })).catch(() => {});
+  }
+
+  renderQuestion();
+}
+
+/* -------- 11. NAV / MENU / THEME -------- */
 const menu  = $('#menuBtn');
 const links = $('#navLinks');
-menu.addEventListener('click', () => {
-  const open = links.classList.toggle('open');
-  menu.setAttribute('aria-expanded', open);
-});
-links.addEventListener('click', () => {
-  links.classList.remove('open');
-  menu.setAttribute('aria-expanded', 'false');
-});
-
-// Theme
-const themeToggle = $('#themeToggle');
-const themeIcon   = themeToggle.querySelector('.theme-icon');
-function applyTheme(t) {
-  document.body.classList.toggle('dark', t === 'dark');
-  themeIcon.textContent = t === 'dark' ? '☀️' : '🌙';
-  document.documentElement.style.colorScheme = t === 'dark' ? 'dark' : 'light';
+if (menu && links) {
+  menu.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    menu.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', () => {
+    links.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false');
+  });
 }
-applyTheme(localStorage.getItem('antas_theme') || 'light');
-themeToggle.addEventListener('click', () => {
-  const next = document.body.classList.contains('dark') ? 'light' : 'dark';
-  localStorage.setItem('antas_theme', next);
-  applyTheme(next);
-});
 
-/* -------- 10b. STICKY NAV HIDE ON SCROLL DOWN -------- */
-const navWrap = $('#navWrap');
-let lastY = window.scrollY;
-let navHidden = false;
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  if (y > 120) {
-    if (y > lastY + 4 && !navHidden) { navWrap.classList.add('nav-hidden'); navHidden = true; }
-    else if (y < lastY - 4 && navHidden) { navWrap.classList.remove('nav-hidden'); navHidden = false; }
-  } else {
-    navWrap.classList.remove('nav-hidden');
-    navHidden = false;
+const themeToggle = $('#themeToggle');
+if (themeToggle) {
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  function applyTheme(t) {
+    document.body.classList.toggle('dark', t === 'dark');
+    if (themeIcon) themeIcon.textContent = t === 'dark' ? '☀️' : '🌙';
+    document.documentElement.style.colorScheme = t === 'dark' ? 'dark' : 'light';
   }
-  lastY = y;
-}, { passive: true });
+  applyTheme(localStorage.getItem('antas_theme') || 'light');
+  themeToggle.addEventListener('click', () => {
+    const next = document.body.classList.contains('dark') ? 'light' : 'dark';
+    localStorage.setItem('antas_theme', next);
+    applyTheme(next);
+  });
+}
 
-/* -------- 10c. ACTIVE NAV LINK -------- */
+/* -------- 12. STICKY NAV HIDE -------- */
+const navWrap = $('#navWrap');
+if (navWrap) {
+  let lastY = window.scrollY;
+  let navHidden = false;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > 120) {
+      if (y > lastY + 4 && !navHidden) { navWrap.classList.add('nav-hidden'); navHidden = true; }
+      else if (y < lastY - 4 && navHidden) { navWrap.classList.remove('nav-hidden'); navHidden = false; }
+    } else {
+      navWrap.classList.remove('nav-hidden');
+      navHidden = false;
+    }
+    lastY = y;
+  }, { passive: true });
+}
+
+/* -------- 13. ACTIVE NAV LINK -------- */
 const navMap = {};
 $$('[data-nav]').forEach(a => navMap[a.dataset.nav] = a);
-const sections = ['gabay','aralin','talasalitaan','pagsusulit'];
-const navIO = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (en.isIntersecting) {
-      Object.values(navMap).forEach(a => a.classList.remove('active'));
-      const link = navMap[en.target.id];
-      if (link) link.classList.add('active');
+const sections = ['gabay','aralin','talasalitaan','funfact','pagsusulit'];
+if (sections.length) {
+  const navIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        Object.values(navMap).forEach(a => a.classList.remove('active'));
+        const link = navMap[en.target.id];
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(id => { const el = document.getElementById(id); if (el) navIO.observe(el); });
+}
+
+/* -------- 14. REVEAL ANIMATIONS -------- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
     }
   });
-}, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(id => { const el = document.getElementById(id); if (el) navIO.observe(el); });
-
-/* -------- 11. REVEAL ANIMATIONS -------- */
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: .12 });
 $$('.reveal').forEach(x => io.observe(x));
 
-/* -------- 12. GLOSSARY -------- */
-function renderGlossary(filter = '') {
+/* -------- 15. GLOSSARY (grid cards + modal) -------- */
+function renderGlossary() {
   const list = $('#glossaryList');
-  const empty = $('#glossaryEmpty');
-  const f = filter.trim().toLowerCase();
-  const items = glossary.filter(g =>
-    !f || g.t.toLowerCase().includes(f) ||
-    g.e.toLowerCase().includes(f) ||
-    g.d.toLowerCase().includes(f)
-  );
-  list.innerHTML = items.map(g => `
-    <article class="glossary-item">
-      <header><strong>${g.t}</strong><em>${g.e}</em></header>
-      <p>${g.d}</p>
-    </article>
+  if (!list) return;
+
+  list.innerHTML = glossary.map((g, i) => `
+    <button class="glossary-card" data-glossary="${i}">
+      <span class="glossary-card-tag">Termino</span>
+      <strong>${g.t}</strong>
+      <em>${g.e}</em>
+      <span class="glossary-card-hint">Tingnan ang kahulugan →</span>
+    </button>
   `).join('');
-  empty.hidden = items.length > 0;
+
+  $$('.glossary-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const g = glossary[+card.dataset.glossary];
+      if (!g || !glossaryDialog) return;
+      glossaryContent.innerHTML = `
+        <div class="dialog-inner">
+          <span class="tag">TALASALITAAN</span>
+          <h2 id="glossaryTitle">${g.t}</h2>
+          <p class="glossary-en"><em>${g.e}</em></p>
+          <p>${g.d}</p>
+        </div>`;
+      lastGlossaryFocused = document.activeElement;
+      glossaryDialog.showModal();
+      setTimeout(() => glossaryDialog.querySelector('.dialog-close')?.focus(), 30);
+    });
+  });
 }
 renderGlossary();
-$('#glossarySearch').addEventListener('input', e => renderGlossary(e.target.value));
 
-/* -------- 13. REFLECTION BOX -------- */
-const REFLECT_KEY = 'antas_wika_reflections_v1';
-function loadReflections() {
-  try { return JSON.parse(localStorage.getItem(REFLECT_KEY) || '[]'); }
-  catch { return []; }
-}
-function saveReflections(arr) {
-  try { localStorage.setItem(REFLECT_KEY, JSON.stringify(arr)); } catch {}
-}
-function renderReflections() {
-  const arr = loadReflections();
-  const list = $('#reflectionList');
-  const clear = $('#clearReflections');
-  list.innerHTML = arr.map((r, i) => `
-    <li>
-      <span class="pill">${r.level}</span>
-      <p>${escapeHtml(r.text)}</p>
-      <button class="del" data-i="${i}" aria-label="Burahin">×</button>
-    </li>
+/* -------- 16. FUN FACT CAROUSEL -------- */
+(function initCarousel() {
+  const track = $('#carouselTrack');
+  const dotsWrap = $('#carouselDots');
+  const prevBtn = $('.carousel-prev');
+  const nextBtn = $('.carousel-next');
+  const root = $('#funfactCarousel');
+  if (!track || !root) return;
+
+  track.innerHTML = funFacts.map(f => `
+    <article class="carousel-slide">
+      <span class="funfact-no">${f.n}</span>
+      <h3>${f.t}</h3>
+      <p>${f.d}</p>
+    </article>
   `).join('');
-  clear.hidden = arr.length === 0;
-}
-function escapeHtml(s) {
-  return s.replace(/[&<>"']/g, c => ({
-    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-  }[c]));
-}
-$('#reflectionForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const level = $('#reflectionLevel').value;
-  const text  = $('#reflectionText').value.trim();
-  if (!text) return;
-  const arr = loadReflections();
-  arr.unshift({ level, text, ts: Date.now() });
-  saveReflections(arr.slice(0, 30));
-  $('#reflectionText').value = '';
-  renderReflections();
-});
-$('#reflectionList').addEventListener('click', e => {
-  const btn = e.target.closest('.del');
-  if (!btn) return;
-  const arr = loadReflections();
-  arr.splice(+btn.dataset.i, 1);
-  saveReflections(arr);
-  renderReflections();
-});
-$('#clearReflections').addEventListener('click', () => {
-  if (!confirm('Burahin lahat ng na-save na halimbawa?')) return;
-  saveReflections([]);
-  renderReflections();
-});
-renderReflections();
 
-/* -------- 14. CONFETTI -------- */
+  if (dotsWrap) {
+    dotsWrap.innerHTML = funFacts.map((_, i) =>
+      `<button class="carousel-dot${i === 0 ? ' active' : ''}" data-slide="${i}" aria-label="Pumunta sa fact ${i+1}"></button>`
+    ).join('');
+  }
+
+  const slides = $$('.carousel-slide', track);
+  const dots = $$('.carousel-dot');
+  let current = 0;
+
+  function goTo(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, j) => d.classList.toggle('active', j === current));
+    if (prevBtn) prevBtn.disabled = current === 0;
+    if (nextBtn) nextBtn.disabled = current === slides.length - 1;
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => goTo(current - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.slide)));
+
+  root.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+  });
+
+  let startX = 0, startY = 0, tracking = false;
+  track.addEventListener('touchstart', e => {
+    if (e.touches.length !== 1) return;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    tracking = true;
+  }, { passive: true });
+  track.addEventListener('touchend', e => {
+    if (!tracking) return;
+    tracking = false;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+      dx < 0 ? goTo(current + 1) : goTo(current - 1);
+    }
+  }, { passive: true });
+
+  goTo(0);
+})();
+
+/* -------- 17. CONFETTI -------- */
 function fireConfetti() {
   const layer = $('#confetti');
+  if (!layer) return;
   const colors = ['#ffc93c','#ee5d46','#51c7b8','#3678e5','#121842'];
   for (let i = 0; i < 60; i++) {
     const piece = document.createElement('span');
@@ -468,45 +663,23 @@ function fireConfetti() {
   }
 }
 
-/* -------- 15. READING PROGRESS + BACK TO TOP -------- */
+/* -------- 18. READING PROGRESS + BACK TO TOP -------- */
 const readingBar = $('#readingBar');
+const backTopBtn = $('#backTop');
 function updateReading() {
+  if (!readingBar) return;
   const h = document.documentElement;
-  const scrolled = h.scrollTop;
   const max = h.scrollHeight - h.clientHeight;
-  const pct = max > 0 ? (scrolled / max) * 100 : 0;
+  const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
   readingBar.style.width = pct + '%';
-  const backTop = $('#backTop');
-  if (scrolled > 600) backTop.hidden = false;
-  else backTop.hidden = true;
+  if (backTopBtn) backTopBtn.hidden = h.scrollTop <= 600;
 }
 window.addEventListener('scroll', updateReading, { passive: true });
 updateReading();
-$('#backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-/* -------- 16. YEAR -------- */
-$('#year').textContent = new Date().getFullYear();
-
-/* -------- 17. MODEL CONTEXT (para sa AI tools) -------- */
-if (document.modelContext?.registerTool) {
-  const ac = new AbortController();
-  Promise.resolve(document.modelContext.registerTool({
-    name: 'start_antas_ng_wika_quiz',
-    title: 'Simulan ang pagsusulit',
-    description: 'Buksan at i-reset ang pagsusulit tungkol sa Antas ng Wika.',
-    inputSchema: { type:'object', properties:{}, additionalProperties:false },
-    annotations: { readOnlyHint:false, untrustedContentHint:false },
-    execute() {
-      index = 0; score = 0;
-      scorePrev.textContent = '—';
-      resultCard.hidden = true;
-      quizCard.hidden = false;
-      renderQuestion();
-      $('#pagsusulit').scrollIntoView();
-      return { status:'started', questions: quiz.length };
-    }
-  }, { signal: ac.signal })).catch(() => {});
+if (backTopBtn) {
+  backTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-/* -------- 18. START -------- */
-renderQuestion();
+/* -------- 19. YEAR -------- */
+const yearEl = $('#year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();

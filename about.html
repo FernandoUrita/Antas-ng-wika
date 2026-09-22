@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fil">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tungkol sa mga mananaliksik ng Antas ng Wika.">
+  <meta name="theme-color" content="#121842">
+  <title>Tungkol sa Amin — Antas ng Wika</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23121842'/%3E%3Cpath d='M15 19h34v22H31l-10 8v-8h-6z' fill='%23ffc93c'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#about-hero">Lumaktaw sa nilalaman</a>
+  <div class="reading-progress" aria-hidden="true"><span id="readingBar"></span></div>
+
+  <header class="nav-wrap" id="navWrap">
+    <nav class="nav" aria-label="Pangunahing nabigasyon">
+      <a class="brand" href="index.html"><span class="brand-mark">Aa</span><span>ANTAS</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#aralin">Mga Aralin</a>
+        <a href="index.html#gabay">Gabay</a>
+        <a href="index.html#talasalitaan">Talasalitaan</a>
+        <a href="index.html#funfact">Fun Fact</a>
+        <a href="index.html#pagsusulit">Pagsusulit</a>
+        <a href="about.html" class="active" aria-current="page">Tungkol</a>
+      </div>
+      <div class="nav-tools">
+        <button class="icon-btn" id="themeToggle" aria-label="Palitan ang tema" title="Palitan ang tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="menu" id="menuBtn" aria-label="Buksan ang menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="about-hero" class="about-hero section-pad">
+      <div class="about-hero-copy">
+        <p class="eyebrow">TUNGKOL SA AMIN</p>
+        <h1>Ang mga <em>mananaliksik</em> sa likod ng materyal.</h1>
+        <p class="lede">Ang Antas ng Wika ay isang interaktibong materyal na binuo upang gawing mas malinaw, mas kawili-wili, at mas naaangkop sa konteksto ang pag-aaral ng wika. Narito ang limang mag-aaral na nagdisenyo, nagsaliksik, at bumuo nito.</p>
+      </div>
+      <div class="about-hero-art" aria-hidden="true">
+        <div class="about-badge">
+          <span class="about-badge-no">2026</span>
+          <span class="about-badge-label">Filipino • Wika at Lipunan</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-context section-pad">
+      <div class="section-kicker">KONTEKSTO NG PANANALIKSIK</div>
+      <h2>Bakit <span>Antas ng Wika?</span></h2>
+      <div class="about-context-grid">
+        <div>
+          <p>Ang pagpili ng angkop na antas ng wika ay isang kasanayang komunikatibo na kailangan sa akademya, propesyon, at pang-araw-araw na buhay. Sa digital na panahon, mas nagiging mahalaga ang kamalayan sa <em>register</em>, <em>barayti</em>, at <em>konteksto</em>.</p>
+          <p>Layunin ng proyektong ito na magbigay ng <strong>interaktibong</strong> at <strong>naa-access</strong> na materyal na tumutugon sa mga mag-aaral sa kolehiyo—hindi lamang sa pagpapaliwanag, kundi sa pagsusubok at pagninilay.</p>
+        </div>
+        <ul class="about-goals">
+          <li><b>01</b><span>Ipaliwanag ang mga antas ng wika sa malinaw na paraan.</span></li>
+          <li><b>02</b><span>Magbigay ng mga halimbawang mula sa tunay na konteksto.</span></li>
+          <li><b>03</b><span>Hamonin ang mag-aaral sa pamamagitan ng pagsusulit at pagninilay.</span></li>
+          <li><b>04</b><span>Isulong ang responsableng paggamit ng wika sa lahat ng larangan.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="researchers section-pad">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">ANG KOPONAN</div>
+          <h2>Limang mananaliksik. Isang layunin.</h2>
+        </div>
+        <p>I-click ang card para makita ang buong detalye ng bawat miyembro.</p>
+      </div>
+
+      <div class="researcher-grid" id="researcherGrid">
+        <button class="researcher-card" data-member="m1" style="--av:#ffc93c">
+          <span class="researcher-photo"><img src="assets/picture.png" alt="Litrato ni Pangalan ng Miyembro 1" loading="lazy"></span>
+          <span class="researcher-info">
+            <strong>Pangalan ng Miyembro 1</strong>
+            <em>Punong Mananaliksik</em>
+            <span class="researcher-hint">Tingnan ang detalye →</span>
+          </span>
+        </button>
+
+        <button class="researcher-card" data-member="m2" style="--av:#51c7b8">
+          <span class="researcher-photo"><img src="assets/picture.png" alt="Litrato ni Pangalan ng Miyembro 2" loading="lazy"></span>
+          <span class="researcher-info">
+            <strong>Pangalan ng Miyembro 2</strong>
+            <em>Mananaliksik sa Wika</em>
+            <span class="researcher-hint">Tingnan ang detalye →</span>
+          </span>
+        </button>
+
+        <button class="researcher-card" data-member="m3" style="--av:#ee5d46">
+          <span class="researcher-photo"><img src="assets/picture.png" alt="Litrato ni Pangalan ng Miyembro 3" loading="lazy"></span>
+          <span class="researcher-info">
+            <strong>Pangalan ng Miyembro 3</strong>
+            <em>Mananaliksik sa Nilalaman</em>
+            <span class="researcher-hint">Tingnan ang detalye →</span>
+          </span>
+        </button>
+
+        <button class="researcher-card" data-member="m4" style="--av:#3678e5">
+          <span class="researcher-photo"><img src="assets/picture.png" alt="Litrato ni Pangalan ng Miyembro 4" loading="lazy"></span>
+          <span class="researcher-info">
+            <strong>Pangalan ng Miyembro 4</strong>
+            <em>Mananaliksik sa Disenyo</em>
+            <span class="researcher-hint">Tingnan ang detalye →</span>
+          </span>
+        </button>
+
+        <button class="researcher-card" data-member="m5" style="--av:#8b5cf6">
+          <span class="researcher-photo"><img src="assets/picture.png" alt="Litrato ni Pangalan ng Miyembro 5" loading="lazy"></span>
+          <span class="researcher-info">
+            <strong>Pangalan ng Miyembro 5</strong>
+            <em>Mananaliksik sa Teknolohiya</em>
+            <span class="researcher-hint">Tingnan ang detalye →</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section class="method section-pad">
+      <div class="section-kicker">PARAAN NG PAG-AARAL</div>
+      <h2>Paano binuo ang materyal.</h2>
+      <div class="method-grid">
+        <div class="method-card">
+          <span class="method-no">01</span>
+          <h3>Pag-aaral ng kurikulum</h3>
+          <p>Sinuri ang K to 12 Filipino Curriculum Guide, KWF na patnubay, at mga pang-akademikong sanggunian.</p>
+        </div>
+        <div class="method-card">
+          <span class="method-no">02</span>
+          <h3>Pagsusuri ng mga halimbawa</h3>
+          <p>Nangalap ng mga tunay na halimbawa mula sa akademya, komunidad, at online na usapan.</p>
+        </div>
+        <div class="method-card">
+          <span class="method-no">03</span>
+          <h3>Disenyo at pagbuo</h3>
+          <p>Ginamit ang HTML, CSS, at JavaScript upang gawing interaktibo ang mga konsepto.</p>
+        </div>
+        <div class="method-card">
+          <span class="method-no">04</span>
+          <h3>Pagsusuri at pagpapabuti</h3>
+          <p>Sinuri ng guro at ng mga kasamang mag-aaral ang nilalaman at isinama ang mga mungkahi.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><span class="brand-mark">Aa</span><span>ANTAS</span></a>
+        <p>Isang interaktibong materyal sa Filipino para sa kolehiyo.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <h4>Nilalaman</h4>
+          <ul>
+            <li><a href="index.html#gabay">Pundasyon</a></li>
+            <li><a href="index.html#aralin">Mga Aralin</a></li>
+            <li><a href="index.html#talasalitaan">Talasalitaan</a></li>
+            <li><a href="index.html#funfact">Fun Fact</a></li>
+            <li><a href="index.html#pagsusulit">Pagsusulit</a></li>
+            <li><a href="about.html">Tungkol sa Amin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Mga Sanggunian</h4>
+          <ul class="refs">
+            <li>Austero, A. D., et al. <em>Komunikasyon sa Akademikong Filipino.</em></li>
+            <li>Almario, V. S. (Pat.). <em>Mga akda sa pag-aaral ng wika.</em></li>
+            <li>KWF. <em>Mga patnubay sa ortograpiya at gramatika.</em></li>
+            <li>DepEd. <em>K to 12 Filipino Curriculum Guide.</em></li>
+            <li>Yule, G. <em>The Study of Language.</em></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Antas ng Wika. Para sa mga mag-aaral at guro.</p>
+      <a href="#about-hero" class="back-top">Bumalik sa itaas ↑</a>
+    </div>
+  </footer>
+
+  <button id="backTop" class="back-top-btn" aria-label="Bumalik sa itaas" title="Bumalik sa itaas" hidden>↑</button>
+
+  <dialog id="memberDialog" aria-labelledby="memberName">
+    <button class="dialog-close" aria-label="Isara">×</button>
+    <div id="memberContent"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
