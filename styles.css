@@ -1377,3 +1377,55 @@ body.dark .about-context { background: #05072a; }
   .reveal { opacity: 1; transform: none; }
   .carousel-track { transition: none; }
 }
+
+/* ============ MEMBER MOTO + SOCIALS ============ */
+.member-moto {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem 1.2rem;
+  background: var(--card);
+  border-left: 5px solid var(--yellow);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.member-moto-label {
+  display: block;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  font-weight: 800;
+  color: var(--coral);
+  text-transform: uppercase;
+  margin-bottom: .35rem;
+}
+.member-moto p {
+  margin: 0;
+  font-style: italic;
+  font-size: .98rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.member-socials {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem 1rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: .85rem;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  transition: background .2s, color .2s, transform .2s;
+}
+.social-link:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+.social-link.fb { border-color: #1877f2; color: #1877f2; }
+.social-link.fb:hover { background: #1877f2; color: #fff; border-color: #1877f2; }
+.social-link.ig { border-color: #e1306c; color: #e1306c; }
+.social-link.ig:hover { background: #e1306c; color: #fff; border-color: #e1306c; }

@@ -181,21 +181,56 @@ const funFacts = [
 
 /* -------- 5. RESEARCHERS DATA -------- */
 const researchers = {
-  m1: { name: 'Pangalan ng Miyembro 1', role: 'Punong Mananaliksik', photo: 'assets/picture.png', color: '#ffc93c',
-    bio: 'Pinamunuan ang buong pananaliksik—mula sa pagpili ng paksa, pagbuo ng balangkas, hanggang sa huling pagsusuri ng nilalaman.',
-    details: [['Papel','Lead Researcher'],['Kontribusyon','Pananaliksik, balangkas, pagsusuri'],['Espesyalisasyon','Metodolohiya at teorya ng wika'],['Email','email1@example.com']] },
-  m2: { name: 'Pangalan ng Miyembro 2', role: 'Mananaliksik sa Wika', photo: 'assets/picture.png', color: '#51c7b8',
-    bio: 'Tumutok sa teorya ng wika, mga barayti, at sosyolingguwistikang konsepto.',
-    details: [['Papel','Language Researcher'],['Kontribusyon','Teorya, barayti, halimbawa'],['Espesyalisasyon','Sosyolingguwistika'],['Email','email2@example.com']] },
-  m3: { name: 'Pangalan ng Miyembro 3', role: 'Mananaliksik sa Nilalaman', photo: 'assets/picture.png', color: '#ee5d46',
-    bio: 'Nagsulat at nag-edit ng mga paliwanag, halimbawa, at hamon sa bawat aralin.',
-    details: [['Papel','Content Writer & Editor'],['Kontribusyon','Pagsusulat, pag-e-edit'],['Espesyalisasyon','Akademikong Filipino'],['Email','email3@example.com']] },
-  m4: { name: 'Pangalan ng Miyembro 4', role: 'Mananaliksik sa Disenyo', photo: 'assets/picture.png', color: '#3678e5',
-    bio: 'Nagdisenyo ng mga larawan, layout, at interaksyon ng pahina.',
-    details: [['Papel','UI/UX Designer'],['Kontribusyon','Disenyo, layout, visual identity'],['Espesyalisasyon','Web design at illustration'],['Email','email4@example.com']] },
-  m5: { name: 'Pangalan ng Miyembro 5', role: 'Mananaliksik sa Teknolohiya', photo: 'assets/picture.png', color: '#8b5cf6',
-    bio: 'Nagtayo ng interactive na bahagi ng materyal gamit ang HTML, CSS, at JavaScript.',
-    details: [['Papel','Web Developer'],['Kontribusyon','Frontend, interactivity, testing'],['Espesyalisasyon','HTML, CSS, JavaScript'],['Email','email5@example.com']] }
+  m1: {
+    name: 'John Ivan Amin-Amin',
+    role: 'Punong Mananaliksik',
+    photo: 'assets/Ivan.jpeg',
+    color: '#ffc93c',
+    bio: 'Pinamunuan ang buong pananaliksik—mula sa pagpili ng paksa, pagbuo ng balangkas, hanggang sa huling pagsusuri ng nilalaman. Namahala rin sa koordinasyon ng grupo at sa pagsusuri ng mga sanggunian.',
+    moto: '"Ang wikang maingat na ginamit ay tulay sa mas malinaw na pag-unawa."',
+    fb: 'https://www.facebook.com/share/1CXA228dKR/',
+    ig: 'https://www.instagram.com/johnivanaminamin/'
+  },
+  m2: {
+    name: 'Jenjelyn P. Abugadie',
+    role: 'Miyembro',
+    photo: 'assets/Abugadie.jpeg',
+    color: '#51c7b8',
+    bio: 'Katuwang sa pananaliksik, pagsusuri ng mga sanggunian, at pagbuo ng mga halimbawang ginamit sa bawat aralin.',
+    moto: '"Bawat salita ay may bigkas na karapat-dapat pakinggan."',
+    fb: 'https://www.facebook.com/profile.php?id=61589374227128',
+    ig: 'https://www.instagram.com/jenjelynabugadie/'
+  },
+  m3: {
+    name: 'Janina B. Esparar',
+    role: 'Miyembro',
+    photo: 'assets/Esparar.jpeg',
+    color: '#ee5d46',
+    bio: 'Tumulong sa pagsusulat, pag-e-edit, at pag-aayos ng nilalaman upang maging malinaw at angkop sa mag-aaral ang materyal.',
+    moto: '"Ang wika ay hindi lamang salita—ito ay pagkatao."',
+    fb: 'https://www.facebook.com/share/1DqJnDvJEe/',
+    ig: 'https://www.instagram.com/janinaesparar/'
+  },
+  m4: {
+    name: 'Jhadelle C. Jabilona',
+    role: 'Miyembro',
+    photo: 'assets/Jabilona.jpeg',
+    color: '#3678e5',
+    bio: 'Nag-ambag sa disenyo, layout, at visual na presentasyon ng mga aralin at interactive na bahagi ng materyal.',
+    moto: '"Sa bawat antas ng wika, may kuwentong nais ipahayag."',
+    fb: 'https://www.facebook.com/share/1Mr36C7ZyQ/',
+    ig: 'https://www.instagram.com/jhadellejabilona/'
+  },
+  m5: {
+    name: 'Kim Raiza C. Posadas',
+    role: 'Miyembro',
+    photo: 'assets/picture.png',
+    color: '#8b5cf6',
+    bio: 'Nakatulong sa pangangalap ng datos, pag-oorganisa ng nilalaman, at pagsusuri ng mga halimbawa ng antas ng wika.',
+    moto: '"Ang pag-unawa sa wika ay pag-unawa rin sa sariling kultura."',
+    fb: 'https://www.facebook.com/share/19KZXxGrmN/',
+    ig: 'https://www.instagram.com/kimraizaposadas/'
+  }
 };
 
 /* -------- 6. DOM SHORTCUTS -------- */
@@ -267,6 +302,10 @@ if (memberDialog && memberContent) {
     card.addEventListener('click', () => {
       const data = researchers[card.dataset.member];
       if (!data) return;
+
+      const hasFb = data.fb && data.fb !== '#';
+      const hasIg = data.ig && data.ig !== '#';
+
       memberContent.innerHTML = `
         <div class="member-dialog-inner">
           <div class="member-photo-large" style="--av:${data.color}">
@@ -276,9 +315,20 @@ if (memberDialog && memberContent) {
             <span class="member-tag">${data.role}</span>
             <h2 id="memberName">${data.name}</h2>
             <p class="member-bio">${data.bio}</p>
-            <ul class="member-details">
-              ${data.details.map(([k, v]) => `<li><span>${k}</span><strong>${v}</strong></li>`).join('')}
-            </ul>
+
+            ${data.moto ? `
+              <div class="member-moto">
+                <span class="member-moto-label">Moto</span>
+                <p>${data.moto}</p>
+              </div>
+            ` : ''}
+
+            ${(hasFb || hasIg) ? `
+              <div class="member-socials">
+                ${hasFb ? `<a href="${data.fb}" target="_blank" rel="noopener" class="social-link fb" aria-label="Facebook">Facebook</a>` : ''}
+                ${hasIg ? `<a href="${data.ig}" target="_blank" rel="noopener" class="social-link ig" aria-label="Instagram">Instagram</a>` : ''}
+              </div>
+            ` : ''}
           </div>
         </div>`;
       lastFocusedMember = document.activeElement;
