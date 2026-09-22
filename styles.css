@@ -481,7 +481,8 @@ td:first-child { font-weight: 700; white-space: nowrap; }
 .carousel {
   position: relative;
   margin-top: 1.5rem;
-  outline: none;
+  overflow: hidden;
+  border-radius: var(--radius);
 }
 .carousel:focus-visible {
   outline: 3px solid var(--coral);

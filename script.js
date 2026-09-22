@@ -78,7 +78,9 @@ const lessons = {
 };
 
 /* -------- 2. QUIZ (20 tanong, A-E) -------- */
-const quiz = [
+/* -------- 2. QUIZ POOL (50 tanong, A-E) -------- */
+const quizPool = [
+  // === EXISTING 20 ===
   { s:'Pormal na komunikasyon', q:'Anong antas ng wika ang karaniwang ginagamit sa mga aklat-aralin, opisyal na dokumento, at pormal na komunikasyon?',
     a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
     e:'Ang Pambansa ang pamantayang wikang ginagamit sa pormal na komunikasyon.' },
@@ -136,10 +138,165 @@ const quiz = [
   { s:'Kahalagahan', q:'Bakit mahalagang malaman ang iba’t ibang antas ng wika?',
     a:['Upang laging gumamit ng malalalim na salita','Upang maiangkop ang paraan ng pagsasalita sa kausap at sitwasyon','Upang maiwasan ang paggamit ng impormal na wika sa lahat ng pagkakataon','Upang gumamit lamang ng Pambansang wika','Upang palaging paikliin ang mga salita'], c:1,
     e:'Ang kahalagahan ay ang pag-aangkop ng wika sa kausap at sitwasyon.' },
-  { s:'Konteksto', q:'Isang estudyante ang gumamit ng pormal na Filipino habang nag-uulat, ngunit gumamit ng “tropa” at iba pang balbal nang kausapin ang mga kaibigan. Ano ang ipinakikita nito?',
+  { s:'Konteksto', q:'Isang estudyante ang gumamit ng pormal na Filipino habang nag-uulat, ngunit gumamit ng “tropa” at iba pang balbal nang kausapin ang mga kaibigan. Ano ang ipinapakita nito?',
     a:['Iisa lamang ang maaaring gamiting antas ng wika ng isang tao','Nagbabago ang antas ng wika ayon sa konteksto at kausap','Balbal lamang ang dapat gamitin sa paaralan','Hindi maaaring pagsabayin ang iba’t ibang antas ng wika','Pampanitikan ang lahat ng impormal na salita'], c:1,
-    e:'Ang antas ng wika ay nagbabago ayon sa konteksto at kausap.' }
+    e:'Ang antas ng wika ay nagbabago ayon sa konteksto at kausap.' },
+
+  // === BAGONG 30 ===
+  { s:'Tula para sa ina', q:'“Ang bulaklak ng kanyang ngiti ay nagbibigay ng kulay sa aking umaga.” Anong antas ng wika ang ginamit?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—gumagamit ng metapora at masining na paglalarawan.' },
+  { s:'Bisaya', q:'“Unsa man ang imong ngalan?” Ang pangungusap na ito ay halimbawa ng anong antas ng wika?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—Bisaya/Cebuano ito, isang wikang panrehiyon.' },
+  { s:'Pagsusulat', q:'“Ipinagkaloob ng pamahalaan ang tulong pinansiyal sa mga nangangailangan.” Anong antas ang ginamit?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal at opisyal na pagpapahayag.' },
+  { s:'Chat', q:'“OMG! Ang ganda ng kuha mo, mare!” Anong antas ng wika ang makikita?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—may “OMG” at “mare” na impormal at makabagong ekspresyon.' },
+  { s:'Pormal na liham', q:'“Ako po ay sumasainyo, lubos na gumagalang…” Anong antas ang ginamit?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal at magalang na wika sa liham.' },
+  { s:'Awit', q:'“Sa ilalim ng buwan, ako ay nananabik sa iyong pagbabalik.” Anong antas ang nangingibabaw?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—masining at romantikong pagpapahayag.' },
+  { s:'Ilokano', q:'“Naimbag nga bigat!” (Magandang umaga!) ay halimbawa ng anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—wikang Ilokano.' },
+  { s:'Text message', q:'“Kita na lang tayo later, ha? Ingat!” Anong antas ang makikita?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Kolokyal—“later” at “ha?” ay impormal at pang-araw-araw.' },
+  { s:'Kabataan', q:'“Sanaol! Grabe ka, petmalu!” Ang “petmalu” ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—baliktad na anyo ng “malupet.”' },
+  { s:'Batayang aklat', q:'“Ang wika ay kasangkapan sa komunikasyon.” Ang pangungusap ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pamantayan at pormal na wika.' },
+  { s:'Maikling kuwento', q:'“Naglalaro ang hangin sa mga dahon ng puno.” Anong antas ang ginamit?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—may personipikasyon at malikhaing imahe.' },
+  { s:'Waray', q:'“Maupay nga adlaw!” (Magandang araw!) ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—wikang Waray.' },
+  { s:'Pamilya', q:'“’Nay, sa’n ka? Kakain na tayo.” Anong antas ang nangingibabaw?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Kolokyal—pinaikling “’Nay” at “sa’n.”' },
+  { s:'Barkada', q:'“Ang solid ng trip mo, lods!” Ang “lods” ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—binagong anyo ng “idol” o “lodi.”' },
+  { s:'Balita', q:'“Ayon sa ulat, tumaas ang bilang ng mga nagtatrabaho ngayong taon.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal na ulat sa balita.' },
+  { s:'Sanaysay', q:'“Ang bayan ko ay isang inang nag-aaruga sa kanyang mga anak.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—metapora ng bayan bilang ina.' },
+  { s:'Cebuano', q:'“Maayong buntag!” (Magandang umaga!) ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—wikang Cebuano/Bisaya.' },
+  { s:'Tawag sa kaibigan', q:'“Uy, tol! Musta na?” Ang “tol” ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—pinaikling “utol” (kapatid), ginagamit sa barkada.' },
+  { s:'Klasrum', q:'“Bumuo ng pangkat na may limang miyembro.” Anong antas ng wika ang ginamit?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—instruksiyon sa klase, pormal.' },
+  { s:'Bugtong', q:'“Isang butil ng palay, sakop ang buong bahay.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—bugtong, masining na anyo ng wika.' },
+  { s:'Hiligaynon', q:'“Kamusta ka?” sa Hiligaynon ay “Kumusta ka?” — pareho lang ba sila ng antas?',
+    a:['Oo, parehong Pambansa','Hindi, ang Hiligaynon ay lalawiganin','Pampanitikan','Balbal','Kolokyal'], c:1,
+    e:'Ang Hiligaynon ay wikang panrehiyon, hindi pambansa.' },
+  { s:'Group chat', q:'“Sawyer! Sunod ako sa’yo, ha?” Anong antas ng wika?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Kolokyal—natural at impormal na pang-araw-araw.' },
+  { s:'Kabataan', q:'“Ang bet ko yung bagong sapatos mo.” Ang “bet” ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—galing sa “bet” (gusto) na kabataan.' },
+  { s:'Dyaryo', q:'“Inanunsyo ng Pangulo ang bagong patakaran sa ekonomiya.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal na ulat sa pahayagan.' },
+  { s:'Alamat', q:'“Noong unang panahon, may isang diwatang nagmamahal sa bulkan.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—alamat, akdang pampanitikan.' },
+  { s:'Pangasinense', q:'“Masantos ya agew!” (Magandang araw!) ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—wikang Pangasinense.' },
+  { s:'Mensahe sa kaibigan', q:'“Wait lang, saglit lang ako.” Anong antas ang may “wait” at “saglit”?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Kolokyal—code-switching at pinaikling anyo.' },
+  { s:'Tiktok comment', q:'“Grabe ka, mars! Dasurv mo ’yan!” Ang “dasurv” ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—“deserve” na binago ng kabataan.' },
+  { s:'Panayam', q:'“Ayon sa aming pananaliksik, malaki ang epekto ng wika sa pagkatuto.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal at akademikong pagpapahayag.' },
+  { s:'Awiting bayan', q:'“Leron, leron sinta, buko ng papaya.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—awiting bayan, akdang masining.' },
+  { s:'Pahayag ng guro', q:'“Bumalik tayo sa paksang natalakay kahapon.” Anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal na pahayag sa klase.' },
+  { s:'Komiks', q:'“Boom! Wasak ang kalaban!” Anong antas ang “wasak”?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—kolokyal/balbal na ekspresyon ng kabataan.' },
+  { s:'Tulang Filipino', q:'“O, aking bayan, ikaw ang mutya ng silangan.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—tula, masining at matalinghaga.' },
+  { s:'Kapampangan', q:'“Mayap a abak!” (Magandang umaga!) ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—wikang Kapampangan.' },
+  { s:'Vlog', q:'“Guys, sobrang worth it ng binili ko, promise!” Anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Kolokyal—may English at pang-araw-araw na ekspresyon.' },
+  { s:'Barkada', q:'“Ang saket ng tiyan ko, par!” Ang “saket” ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—kolokyal/balbal na pinaikling “masakit.”' },
+  { s:'Ulat', q:'“Nakapagtala ng 5% na paglago ang ekonomiya ng bansa.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal na ulat pang-ekonomiya.' },
+  { s:'Nobela', q:'“Bumaha ng luha sa kanyang mga mata nang makita ang nawawalang anak.” Anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—hyperbole at masining na paglalarawan.' },
+  { s:'Tausug', q:'“Assalamu alaikum!” (Kapayapaan sa iyo!) ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—pagbating Tausug/Arabiko, gamit sa rehiyon.' },
+  { s:'Tropa', q:'“Tara, kain tayo sa labas, mga tsong!” Ang “tsong” ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—tawag sa kaibigan sa barkada.' },
+  { s:'Patalastas', q:'“Bili na! Murang-mura lang, sulit na sulit!” Anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:3,
+    e:'Kolokyal—patalastas sa pang-araw-araw, impormal.' },
+  { s:'Batas', q:'“Ayon sa Artikulo XIV ng Konstitusyon, ang Filipino ang pambansang wika.” Anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal na batas at opisyal na dokumento.' },
+  { s:'Epiko', q:'“Si Lam-ang ay isang bayaning may pambihirang lakas.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—epikong akdang pampanitikan.' },
+  { s:'Boholano', q:'“Kumusta man ka?” (Bohol variant) ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:2,
+    e:'Lalawiganin—wikang Boholano.' },
+  { s:'SMS', q:'“C u later, ingatz!” Anong antas ang SMS-style na ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—SMS slang at pinaghalong Ingles.' },
+  { s:'Talakayan', q:'“Ano ang pananaw mo sa isyung ito?” Anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pormal na tanong sa talakayan.' },
+  { s:'Balagtasan', q:'“Aking katwiran, ang wika ay di dapat ikahon.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—balagtasan, masining na pakikipagtalo.' },
+  { s:'Pagbati sa barkada', q:'“Uy, mars! Ang tagal mo ah!” Ang “mars” ay anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:4,
+    e:'Balbal—tawag sa kaibigan sa barkada.' },
+  { s:'Resipi', q:'“Isang tasa ng harina, dalawang kutsarang asukal…” Anong antas?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
+    e:'Pambansa—pamantayan at malinaw na panuto.' },
+  { s:'Sambotani', q:'“Sa ilog ng Amburayan, ang mga dalaga ay nagsasayaw.” Anong antas ito?',
+    a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
+    e:'Pampanitikan—sambotani, akdang pampanitikan.' }
 ];
+
+const TOTAL_QUESTIONS = 20;  // Bilang ng tanong kada session
+const STORAGE_SESSION = 'antas_wika_quiz_session_v3';
 
 /* -------- 3. GLOSSARY DATA -------- */
 const glossary = [
@@ -342,6 +499,7 @@ if (memberDialog && memberContent) {
 }
 
 /* -------- 10. QUIZ ENGINE -------- */
+/* -------- 10. QUIZ ENGINE (random 20 mula sa pool, persistent sa refresh) -------- */
 const quizCard = $('#quizCard');
 if (quizCard) {
   let index = 0, score = 0, chosen = false;
@@ -360,11 +518,61 @@ if (quizCard) {
   const timerToggle = $('#timerToggle');
   const resultCard  = $('#resultCard');
 
+  // Ang session array (20 random questions) - ito ang lalaruin
+  let quiz = [];
+
+  // Fisher-Yates shuffle
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  // Gumawa ng bagong random session
+  function createNewSession() {
+    return {
+      questions: shuffle(quizPool).slice(0, TOTAL_QUESTIONS),
+      index: 0,
+      score: 0,
+      chosen: false,
+      selected: null,     // index ng napiling sagot sa current question
+      completed: false,   // tapos na ba ang buong quiz
+      ts: Date.now()
+    };
+  }
+
+  // I-save ang session sa localStorage
+  function saveSession() {
+    try {
+      localStorage.setItem(STORAGE_SESSION, JSON.stringify({
+        questions: quiz,
+        index, score, chosen,
+        selected: chosen ? selectedAnswer : null,
+        completed: !resultCard.hidden,
+        ts: Date.now()
+      }));
+    } catch {}
+  }
+
+  // I-load ang session mula sa localStorage
+  function loadSession() {
+    try {
+      const raw = localStorage.getItem(STORAGE_SESSION);
+      if (!raw) return null;
+      const d = JSON.parse(raw);
+      if (!d || !Array.isArray(d.questions) || d.questions.length !== TOTAL_QUESTIONS) return null;
+      return d;
+    } catch { return null; }
+  }
+
+  let selectedAnswer = null;
+
   function renderQuestion() {
-    chosen = false;
-    nextBtn.disabled = true;
-    feedbackEl.textContent = '';
     const item = quiz[index];
+    if (!item) return;
 
     count.textContent = `Tanong ${index + 1} sa ${quiz.length}`;
     bar.style.width   = `${((index + 1) / quiz.length) * 100}%`;
@@ -380,13 +588,34 @@ if (quizCard) {
       answersEl.appendChild(b);
     });
 
-    if (timerToggle.checked) startTimer();
+    // Kung may naunang sagot na (galing sa refresh), ibalik ang estado
+    if (chosen && selectedAnswer !== null) {
+      const btns = $$('.answer');
+      btns.forEach((el, j) => {
+        el.disabled = true;
+        if (j === item.c) el.classList.add('correct');
+      });
+      if (selectedAnswer !== item.c && btns[selectedAnswer]) {
+        btns[selectedAnswer].classList.add('wrong');
+      }
+      feedbackEl.innerHTML = selectedAnswer === item.c
+        ? `<strong>Tama.</strong> ${item.e}`
+        : `<strong>Hindi pa.</strong> ${item.e}`;
+      nextBtn.disabled = false;
+      scorePrev.textContent = score;
+    } else {
+      feedbackEl.textContent = '';
+      nextBtn.disabled = true;
+    }
+
+    if (timerToggle.checked && !chosen) startTimer();
     else stopTimer();
   }
 
   function selectAnswer(i, btn) {
     if (chosen) return;
     chosen = true;
+    selectedAnswer = i;
     stopTimer();
     const item = quiz[index];
     $$('.answer').forEach((el, j) => {
@@ -397,7 +626,7 @@ if (quizCard) {
     else { btn.classList.add('wrong'); feedbackEl.innerHTML = `<strong>Hindi pa.</strong> ${item.e}`; }
     nextBtn.disabled = false;
     scorePrev.textContent = score;
-    saveProgress();
+    saveSession();
   }
 
   function startTimer() {
@@ -413,13 +642,15 @@ if (quizCard) {
         stopTimer();
         if (!chosen) {
           const item = quiz[index];
+          chosen = true;
+          selectedAnswer = null;
           $$('.answer').forEach((el, j) => {
             el.disabled = true;
             if (j === item.c) el.classList.add('correct');
           });
-          chosen = true;
           feedbackEl.innerHTML = `<strong>Tapos na ang oras.</strong> ${item.e}`;
           nextBtn.disabled = false;
+          saveSession();
         }
       }
     }, 1000);
@@ -438,20 +669,33 @@ if (quizCard) {
                                     pct >= .625 ? 'Malinaw na sa iyo ang karamihan ng konsepto. Balikan ang paliwanag sa mga tanong na hindi nakuha.' :
                                                   'I-click muli ang mga larawang-aralin at ituon ang pansin sa kausap, layunin, lugar, at sitwasyon.';
     if (pct >= .875) fireConfetti();
-    saveProgress();
+    saveSession();
     resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   nextBtn.addEventListener('click', () => {
     index++;
-    index < quiz.length ? renderQuestion() : showResult();
+    chosen = false;
+    selectedAnswer = null;
+    if (index < quiz.length) {
+      saveSession();
+      renderQuestion();
+    } else {
+      saveSession();
+      showResult();
+    }
   });
 
   $('#restartBtn').addEventListener('click', () => {
+    // Bagong random 20
+    const session = createNewSession();
+    quiz = session.questions;
     index = 0; score = 0;
+    chosen = false; selectedAnswer = null;
     scorePrev.textContent = '—';
     resultCard.hidden = true;
     quizCard.hidden   = false;
+    saveSession();
     renderQuestion();
   });
 
@@ -475,51 +719,71 @@ if (quizCard) {
     shareBtn.addEventListener('click', () => {
       navigator.share({
         title: 'Antas ng Wika — Pagsusulit',
-        text: `Nakuha ko ang ${score}/20 sa pagsusulit tungkol sa Antas ng Wika!`,
+        text: `Nakuha ko ang ${score}/${quiz.length} sa pagsusulit tungkol sa Antas ng Wika!`,
         url: location.href
       }).catch(() => {});
     });
   }
 
-  const STORAGE_KEY = 'antas_wika_progress_v2';
-  function saveProgress() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ score, index, ts: Date.now() })); } catch {}
+  // ===== INIT: load existing o gumawa ng bagong session =====
+  const saved = loadSession();
+  if (saved) {
+    // May ongoing o tapos na session — i-restore
+    quiz = saved.questions;
+    index = saved.index || 0;
+    score = saved.score || 0;
+    chosen = !!saved.chosen;
+    selectedAnswer = (typeof saved.selected === 'number') ? saved.selected : null;
+
+    if (saved.completed) {
+      // Tapos na — ipakita ang result
+      quizCard.hidden = true;
+      resultCard.hidden = false;
+      $('#finalScore').textContent = score;
+      const pct = score / quiz.length;
+      $('#resultTitle').textContent = pct >= .875 ? 'Mahusay kang bumasa ng konteksto!' :
+                                      pct >= .625 ? 'Maganda ang pundasyon mo.' :
+                                                    'Balikan natin ang mga module.';
+      $('#resultText').textContent  = pct >= .875 ? 'Kaya mong iugnay ang antas ng wika sa tunay na sitwasyong komunikatibo.' :
+                                      pct >= .625 ? 'Malinaw na sa iyo ang karamihan ng konsepto. Balikan ang paliwanag sa mga tanong na hindi nakuha.' :
+                                                    'I-click muli ang mga larawang-aralin at ituon ang pansin sa kausap, layunin, lugar, at sitwasyon.';
+      scorePrev.textContent = score;
+    } else {
+      // Ongoing — ituloy
+      scorePrev.textContent = score;
+      renderQuestion();
+    }
+  } else {
+    // Walang session — gumawa ng bago
+    const session = createNewSession();
+    quiz = session.questions;
+    index = 0; score = 0; chosen = false; selectedAnswer = null;
+    saveSession();
+    renderQuestion();
   }
-  function loadProgress() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return;
-      const d = JSON.parse(raw);
-      if (d && typeof d.score === 'number' && d.score > 0) {
-        const saved = $('#savedScore');
-        saved.hidden = false;
-        saved.textContent = `Huling puntos: ${d.score}/20 (${new Date(d.ts).toLocaleDateString('fil-PH')})`;
-      }
-    } catch {}
-  }
-  loadProgress();
 
   if (document.modelContext?.registerTool) {
     const ac = new AbortController();
     Promise.resolve(document.modelContext.registerTool({
       name: 'start_antas_ng_wika_quiz',
       title: 'Simulan ang pagsusulit',
-      description: 'Buksan at i-reset ang pagsusulit tungkol sa Antas ng Wika.',
+      description: 'Buksan at i-reset ang pagsusulit (bagong random 20 tanong).',
       inputSchema: { type:'object', properties:{}, additionalProperties:false },
       annotations: { readOnlyHint:false, untrustedContentHint:false },
       execute() {
-        index = 0; score = 0;
+        const session = createNewSession();
+        quiz = session.questions;
+        index = 0; score = 0; chosen = false; selectedAnswer = null;
         scorePrev.textContent = '—';
         resultCard.hidden = true;
         quizCard.hidden = false;
+        saveSession();
         renderQuestion();
         $('#pagsusulit').scrollIntoView();
         return { status:'started', questions: quiz.length };
       }
     }, { signal: ac.signal })).catch(() => {});
   }
-
-  renderQuestion();
 }
 
 /* -------- 11. NAV / MENU / THEME -------- */
@@ -632,6 +896,7 @@ function renderGlossary() {
 renderGlossary();
 
 /* -------- 16. FUN FACT CAROUSEL -------- */
+/* -------- 16. FUN FACT CAROUSEL -------- */
 (function initCarousel() {
   const track = $('#carouselTrack');
   const dotsWrap = $('#carouselDots');
@@ -670,11 +935,23 @@ renderGlossary();
   if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
   dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.slide)));
 
-  root.addEventListener('keydown', e => {
+  // Keyboard: global (naka-attach sa document, hindi sa root)
+  document.addEventListener('keydown', e => {
+    // Huwag harangin kung may bukas na dialog o nasa input
+    if (document.querySelector('dialog[open]')) return;
+    const tag = document.activeElement.tagName;
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(tag)) return;
+
+    // Siguraduhing nasa viewport ang carousel bago tumugon
+    const rect = root.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (!inView) return;
+
     if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
     if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
   });
 
+  // Swipe (touch)
   let startX = 0, startY = 0, tracking = false;
   track.addEventListener('touchstart', e => {
     if (e.touches.length !== 1) return;
