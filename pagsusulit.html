@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="20 tanong na written quiz tungkol sa Antas ng Wika.">
+  <meta name="theme-color" content="#121842">
   <title>Pagsusulit — Antas ng Wika</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23121842'/%3E%3Cpath d='M15 19h34v22H31l-10 8v-8h-6z' fill='%23ffc93c'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +40,7 @@
       <div class="written-hero-copy">
         <p class="eyebrow">PAGSUSULIT • WRITTEN</p>
         <h1>Pagsusulit: <em>Antas ng Wika</em></h1>
-        <p class="lede">20 tanong na susubok sa iyong pag-unawa sa limang antas ng wika—Pambansa, Pampanitikan, Lalawiganin, Kolokyal, at Balbal. May auto-check, feedback, at print option.</p>
+        <p class="lede">20 tanong na susubok sa iyong pag-unawa sa limang antas ng wika. May auto-check, feedback, at print option.</p>
         <div class="hero-meta">
           <span><b>20</b> tanong</span>
           <span><b>2</b> bahagi</span>
@@ -56,9 +58,15 @@
     <section class="written-quiz section-pad">
       <div class="written-quiz-header">
         <div class="written-quiz-info">
-          <span><b>Pangalan:</b> _______________________</span>
-          <span><b>Petsa:</b> _______________</span>
-          <span><b>Iskor:</b> ___ / 20</span>
+          <label class="written-field">
+            <span><b>Pangalan:</b></span>
+            <input type="text" id="studentName" placeholder="Isulat ang iyong pangalan" autocomplete="name">
+          </label>
+          <label class="written-field">
+            <span><b>Petsa:</b></span>
+            <input type="date" id="studentDate">
+          </label>
+          <span class="written-score-display"><b>Iskor:</b> <span id="headerScore">___ / 20</span></span>
         </div>
         <div class="written-quiz-legend">
           <span><b>A.</b> Pambansa</span>
@@ -83,6 +91,18 @@
           <span id="writtenScore">0</span><small>/ 20</small>
         </div>
         <p id="writtenResultText"></p>
+
+        <div class="result-share-info">
+          <p><b>Pangalan:</b> <span id="resultName">—</span></p>
+          <p><b>Petsa:</b> <span id="resultDate">—</span></p>
+        </div>
+
+        <div class="written-result-actions">
+          <button id="shareWrittenQuiz" class="button primary">📤 I-send sa Chat</button>
+          <button id="copyWrittenQuiz" class="button ghost">📋 Kopyahin</button>
+        </div>
+
+        <p class="share-hint" id="shareHint" hidden>✓ Nakopya na sa clipboard!</p>
       </div>
     </section>
   </main>
