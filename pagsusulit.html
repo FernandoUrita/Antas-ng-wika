@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fil">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pagsusulit — Antas ng Wika</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23121842'/%3E%3Cpath d='M15 19h34v22H31l-10 8v-8h-6z' fill='%23ffc93c'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#simula">Lumaktaw sa nilalaman</a>
+  <div class="reading-progress" aria-hidden="true"><span id="readingBar"></span></div>
+
+  <header class="nav-wrap" id="navWrap">
+    <nav class="nav" aria-label="Pangunahing nabigasyon">
+      <a class="brand" href="index.html"><span class="brand-mark">AW</span><span>ANTAS NG WIKA</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#aralin">Mga Aralin</a>
+        <a href="index.html#gabay">Gabay</a>
+        <a href="index.html#talasalitaan">Talasalitaan</a>
+        <a href="index.html#funfact">Fun Fact</a>
+        <a href="index.html#pagsusulit">Pagsusulit</a>
+        <a href="pagsusulit.html" class="active" aria-current="page">Written</a>
+        <a href="about.html">Mga Mananaliksik</a>
+      </div>
+      <div class="nav-tools">
+        <button class="icon-btn" id="themeToggle" aria-label="Palitan ang tema"><span class="theme-icon">🌙</span></button>
+        <button class="menu" id="menuBtn" aria-label="Buksan ang menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="simula" class="written-hero section-pad">
+      <div class="written-hero-copy">
+        <p class="eyebrow">PAGSUSULIT • WRITTEN</p>
+        <h1>Pagsusulit: <em>Antas ng Wika</em></h1>
+        <p class="lede">20 tanong na susubok sa iyong pag-unawa sa limang antas ng wika—Pambansa, Pampanitikan, Lalawiganin, Kolokyal, at Balbal. May auto-check, feedback, at print option.</p>
+        <div class="hero-meta">
+          <span><b>20</b> tanong</span>
+          <span><b>2</b> bahagi</span>
+          <span><b>~15</b> minuto</span>
+        </div>
+      </div>
+      <div class="written-hero-art" aria-hidden="true">
+        <div class="written-badge">
+          <span class="written-badge-no">20</span>
+          <span class="written-badge-label">Tanong</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="written-quiz section-pad">
+      <div class="written-quiz-header">
+        <div class="written-quiz-info">
+          <span><b>Pangalan:</b> _______________________</span>
+          <span><b>Petsa:</b> _______________</span>
+          <span><b>Iskor:</b> ___ / 20</span>
+        </div>
+        <div class="written-quiz-legend">
+          <span><b>A.</b> Pambansa</span>
+          <span><b>B.</b> Pampanitikan</span>
+          <span><b>C.</b> Lalawiganin</span>
+          <span><b>D.</b> Kolokyal</span>
+          <span><b>E.</b> Balbal</span>
+        </div>
+      </div>
+
+      <div class="written-quiz-container" id="writtenQuizContainer"></div>
+
+      <div class="written-quiz-actions">
+        <button id="checkWrittenQuiz" class="button primary">Suriin ang Sagot ✓</button>
+        <button id="resetWrittenQuiz" class="button ghost">I-reset ↻</button>
+        <button id="printWrittenQuiz" class="button ghost">I-print 🖨️</button>
+      </div>
+
+      <div class="written-quiz-result" id="writtenQuizResult" hidden>
+        <h3>Resulta</h3>
+        <div class="written-result-score">
+          <span id="writtenScore">0</span><small>/ 20</small>
+        </div>
+        <p id="writtenResultText"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><span class="brand-mark">Aa</span><span>ANTAS</span></a>
+        <p>Isang interaktibong materyal sa Filipino para sa kolehiyo.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <h4>Nilalaman</h4>
+          <ul>
+            <li><a href="index.html#gabay">Pundasyon</a></li>
+            <li><a href="index.html#aralin">Mga Aralin</a></li>
+            <li><a href="index.html#talasalitaan">Talasalitaan</a></li>
+            <li><a href="index.html#funfact">Fun Fact</a></li>
+            <li><a href="index.html#pagsusulit">Pagsusulit</a></li>
+            <li><a href="pagsusulit.html">Written Quiz</a></li>
+            <li><a href="about.html">Mga Mananaliksik</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Mga Sanggunian</h4>
+          <ul class="refs">
+            <li>Austero, A. D., et al. <em>Komunikasyon sa Akademikong Filipino.</em></li>
+            <li>Almario, V. S. (Pat.). <em>Mga akda sa pag-aaral ng wika.</em></li>
+            <li>KWF. <em>Mga patnubay sa ortograpiya at gramatika.</em></li>
+            <li>DepEd. <em>K to 12 Filipino Curriculum Guide.</em></li>
+            <li>Yule, G. <em>The Study of Language.</em></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Antas ng Wika. Para sa mga mag-aaral at guro.</p>
+      <a href="#simula" class="back-top">Bumalik sa itaas ↑</a>
+    </div>
+  </footer>
+
+  <button id="backTop" class="back-top-btn" aria-label="Bumalik sa itaas" title="Bumalik sa itaas" hidden>↑</button>
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>

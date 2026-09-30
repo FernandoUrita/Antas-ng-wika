@@ -1010,3 +1010,144 @@ if (backTopBtn) {
 /* -------- 19. YEAR -------- */
 const yearEl = $('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+/* =========================================================
+   WRITTEN QUIZ — Hiwalay na pahina (pagsusulit.html)
+   ========================================================= */
+
+const writtenQuizData = [
+  {
+    section: 'I. Pagkilala sa Antas ng Wika',
+    instruction: 'Panuto: Tukuyin kung anong antas ng wika ang salitang may salungguhit. Isulat ang titik ng tamang sagot.',
+    questions: [
+      { q: 'Ang <u>hagupit ng tadhana</u> ay hindi hadlang sa pag-abot ng pangarap.', a: 'B', e: 'Pampanitikan — gumagamit ng talinghaga.' },
+      { q: '<u>Meron</u> ka ba ng dalaing tubig para sa pagod na manlalakbay?', a: 'D', e: 'Kolokyal — pinaikling anyo ng "mayroon".' },
+      { q: 'Ang kapatid ko ay nagtatrabaho sa <u>gobyerno</u>.', a: 'A', e: 'Pambansa — pormal at opisyal na salita.' },
+      { q: '<u>Erpat</u> ang nagbilin sa akin na mag-aral nang mabuti.', a: 'E', e: 'Balbal — impormal na tawag sa ama.' },
+      { q: '<u>Mangan tayo</u> sa palengke bago sumapit ang gabi.', a: 'C', e: 'Lalawiganin — salitang Ilokano.' },
+      { q: 'Ang puso\'y <u>umaapaw sa ligaya</u> sa tuwing nakikita ka.', a: 'B', e: 'Pampanitikan — masining na pagpapahayag.' },
+      { q: '<u>Kano</u> ang aking kaklase na lumaki sa Amerika.', a: 'E', e: 'Balbal — impormal na tawag sa Amerikano.' },
+      { q: 'Di ko alam kung <u>paano</u> ko siya pasasalamatan.', a: 'D', e: 'Kolokyal — pinaikling anyo ng "paano".' },
+      { q: 'Ang <u>pamahalaan</u> ay naglunsad ng bagong programa para sa kabataan.', a: 'A', e: 'Pambansa — pormal at opisyal na salita.' },
+      { q: '<u>Chibog</u> na tayo bago lumubog ang araw.', a: 'E', e: 'Balbal — impormal na salita para sa pagkain.' }
+    ]
+  },
+  {
+    section: 'II. Pag-unawa at Pagsusuri',
+    instruction: 'Panuto: Piliin ang pinakatamang sagot.',
+    questions: [
+      { q: 'Alin sa mga sumusunod ang katangian ng wikang PAMBANSA?', a: 'B', options: ['Ginagamit ito sa usapang kalye lamang', 'Ito ay nauunawaan ng buong bansa at ginagamit sa mga opisyal na dokumento', 'Ito ay mga salitang karaniwang naririnig sa tiyak na probinsya', 'Ito ay mga salitang bagong likha ng mga kabataan'], e: 'Ang Pambansa ay nauunawaan ng buong bansa at ginagamit sa opisyal na dokumento.' },
+      { q: 'Bakit PAMPANITIKAN ang ginagamit sa mga tula at kwento?', a: 'C', options: ['Dahil ito ay madaling intindihin ng lahat', 'Dahil ito ay hango sa ibang wika', 'Dahil may masining, malalim, at matalinghagang pagpapahayag', 'Dahil ito ay ginagamit ng mga matatanda lamang'], e: 'Ang Pampanitikan ay may masining at matalinghagang pagpapahayag.' },
+      { q: 'Alin sa mga sumusunod ang LALAWIGANIN?', a: 'B', options: ['salitang "maganda"', 'salitang "inday" o "ading"', 'salitang "pulis"', 'salitang "epal"'], e: 'Ang "inday" o "ading" ay mga salitang lalawiganin.' },
+      { q: 'Ano ang pagkakaiba ng KOLOKYAL sa ibang antas?', a: 'A', options: ['Ito ay pinaikli o binagong anyo ng salitang pambansa, ginagamit sa magkakaibigan', 'Ito ay ginagamit sa mga pormal na pagsusulit', 'Ito ay mga salitang hindi na ginagamit ngayon', 'Ito ay hango sa mga dayuhang wika'], e: 'Ang Kolokyal ay pinaikli o binagong anyo ng salitang pambansa.' },
+      { q: 'Alin sa mga sumusunod ang BALBAL?', a: 'C', options: ['guro', 'titser', 'par', 'gurohan'], e: 'Ang "par" ay balbal na tawag sa kaibigan.' },
+      { q: 'Alin ang HINDI tamang pagtutumbas?', a: 'C', options: ['Pambansa — opisyal na wika', 'Pampanitikan — talinghaga at sining', 'Lalawiganin — ginagamit sa buong bansa', 'Balbal — salitang-kalye'], e: 'Ang Lalawiganin ay hindi ginagamit sa buong bansa kundi sa isang rehiyon lamang.' },
+      { q: 'Ang katagang "ang kanyang ngiti ay sikat ng araw" ay anong antas?', a: 'B', options: ['Pambansa', 'Pampanitikan', 'Lalawiganin', 'Kolokyal'], e: 'Pampanitikan — gumagamit ng metapora.' },
+      { q: 'Alin ang halimbawa ng KOLOKYAL?', a: 'A', options: ['mayroon → meron', 'ama → erpat', 'kumain → mangan', 'maganda → marikit'], e: 'Ang "meron" ay kolokyal na anyo ng "mayroon".' },
+      { q: 'Saan pinakamainam gamitin ang wikang PAMBANSA?', a: 'C', options: ['sa usapan ng magkakaibigan sa kanto', 'sa tula at maikling kwento', 'sa talumpati, batas, at mga aklat-pampaaralan', 'sa kwentuhan sa loob ng bahay'], e: 'Ang Pambansa ay angkop sa pormal na komunikasyon.' },
+      { q: 'Bakit mahalagang kilalanin ang pagkakaiba ng limang antas ng wika?', a: 'B', options: ['Upang malaman kung alin ang mas magandang wika', 'Upang magamit ang angkop na wika sa tamang tao, lugar, at pagkakataon', 'Upang makapagmalaki sa iba', 'Upang malaman kung alin ang wika ng mayaman'], e: 'Ang kahalagahan ay ang paggamit ng angkop na wika sa tamang konteksto.' }
+    ]
+  }
+];
+
+function initWrittenQuiz() {
+  const container = document.getElementById('writtenQuizContainer');
+  if (!container) return;
+
+  let html = '';
+  let qNum = 0;
+
+  writtenQuizData.forEach((section) => {
+    html += '<div class="written-section"><div class="written-section-header"><h3>' + section.section + '</h3><p class="written-instruction">' + section.instruction + '</p></div><div class="written-questions">';
+
+    section.questions.forEach((item) => {
+      qNum++;
+      const inputName = 'wq_' + qNum;
+      html += '<div class="written-question" data-qnum="' + qNum + '" data-answer="' + item.a + '"><div class="written-q-text"><span class="written-q-num">' + qNum + '.</span><span>' + item.q + '</span></div><div class="written-choices">';
+
+      if (item.options) {
+        item.options.forEach((opt, oIdx) => {
+          const letter = String.fromCharCode(65 + oIdx);
+          html += '<label class="written-choice"><input type="radio" name="' + inputName + '" value="' + letter + '"><span class="written-choice-letter">' + letter + '.</span><span class="written-choice-text">' + opt + '</span></label>';
+        });
+      } else {
+        ['Pambansa', 'Pampanitikan', 'Lalawiganin', 'Kolokyal', 'Balbal'].forEach((opt, oIdx) => {
+          const letter = String.fromCharCode(65 + oIdx);
+          html += '<label class="written-choice"><input type="radio" name="' + inputName + '" value="' + letter + '"><span class="written-choice-letter">' + letter + '.</span><span class="written-choice-text">' + opt + '</span></label>';
+        });
+      }
+
+      html += '</div><div class="written-feedback" id="wf_' + qNum + '"></div></div>';
+    });
+
+    html += '</div></div>';
+  });
+
+  container.innerHTML = html;
+
+  document.getElementById('checkWrittenQuiz')?.addEventListener('click', () => {
+    let score = 0;
+    const total = 20;
+
+    document.querySelectorAll('.written-question').forEach(q => {
+      const qNum = q.dataset.qnum;
+      const correct = q.dataset.answer;
+      const selected = q.querySelector('input[type="radio"]:checked');
+      const feedback = document.getElementById('wf_' + qNum);
+
+      q.classList.remove('correct', 'wrong');
+      feedback.innerHTML = '';
+
+      const correctLabel = q.querySelector('input[value="' + correct + '"]')?.closest('.written-choice')?.querySelector('.written-choice-text')?.textContent || correct;
+
+      if (selected) {
+        if (selected.value === correct) {
+          score++;
+          q.classList.add('correct');
+          feedback.innerHTML = '<span class="wf-correct">✓ Tama!</span>';
+        } else {
+          q.classList.add('wrong');
+          feedback.innerHTML = '<span class="wf-wrong">✗ Mali. Tamang sagot: <b>' + correct + '</b> — ' + correctLabel + '</span>';
+        }
+      } else {
+        q.classList.add('wrong');
+        feedback.innerHTML = '<span class="wf-wrong">— Walang sagot. Tamang sagot: <b>' + correct + '</b> — ' + correctLabel + '</span>';
+      }
+    });
+
+    const resultDiv = document.getElementById('writtenQuizResult');
+    const scoreEl = document.getElementById('writtenScore');
+    const textEl = document.getElementById('writtenResultText');
+
+    scoreEl.textContent = score;
+    resultDiv.hidden = false;
+
+    const pct = score / total;
+    if (pct >= 0.9) {
+      textEl.textContent = 'Napakahusay! Ganap mong nauunawaan ang mga antas ng wika.';
+      fireConfetti();
+    } else if (pct >= 0.75) {
+      textEl.textContent = 'Mahusay! Malinaw sa iyo ang karamihan ng konsepto.';
+    } else if (pct >= 0.5) {
+      textEl.textContent = 'Maganda ang pundasyon. Balikan ang mga module para sa mga hindi nakuha.';
+    } else {
+      textEl.textContent = 'Kailangan pang magsanay. Balikan ang mga aralin at subukan muli.';
+    }
+
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  document.getElementById('resetWrittenQuiz')?.addEventListener('click', () => {
+    document.querySelectorAll('.written-question').forEach(q => {
+      q.classList.remove('correct', 'wrong');
+      q.querySelectorAll('input[type="radio"]').forEach(inp => inp.checked = false);
+      document.getElementById('wf_' + q.dataset.qnum).innerHTML = '';
+    });
+    document.getElementById('writtenQuizResult').hidden = true;
+  });
+
+  document.getElementById('printWrittenQuiz')?.addEventListener('click', () => {
+    window.print();
+  });
+}
+
+initWrittenQuiz();
