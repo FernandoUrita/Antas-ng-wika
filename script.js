@@ -1010,3 +1010,285 @@ if (backTopBtn) {
 /* -------- 19. YEAR -------- */
 const yearEl = $('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+/* =========================================================
+   WRITTEN QUIZ — pagsusulit.html (20 tanong)
+   ========================================================= */
+const writtenQuizData = [
+  {
+    section: 'I. Pagkilala sa Antas ng Wika',
+    instruction: 'Panuto: Tukuyin kung anong antas ng wika ang salitang may salungguhit. Isulat ang titik ng tamang sagot.',
+    questions: [
+      { q: 'Ang <u>hagupit ng tadhana</u> ay hindi hadlang sa pag-abot ng pangarap.', a: 'B', e: 'Pampanitikan — gumagamit ng talinghaga.' },
+      { q: '<u>Meron</u> ka ba ng dalaing tubig para sa pagod na manlalakbay?', a: 'D', e: 'Kolokyal — pinaikling anyo ng "mayroon".' },
+      { q: 'Ang kapatid ko ay nagtatrabaho sa <u>gobyerno</u>.', a: 'A', e: 'Pambansa — pormal at opisyal na salita.' },
+      { q: '<u>Erpat</u> ang nagbilin sa akin na mag-aral nang mabuti.', a: 'E', e: 'Balbal — impormal na tawag sa ama.' },
+      { q: '<u>Mangan tayo</u> sa palengke bago sumapit ang gabi.', a: 'C', e: 'Lalawiganin — salitang Ilokano.' },
+      { q: 'Ang puso\'y <u>umaapaw sa ligaya</u> sa tuwing nakikita ka.', a: 'B', e: 'Pampanitikan — masining na pagpapahayag.' },
+      { q: '<u>Kano</u> ang aking kaklase na lumaki sa Amerika.', a: 'E', e: 'Balbal — impormal na tawag sa Amerikano.' },
+      { q: 'Di ko alam kung <u>paano</u> ko siya pasasalamatan.', a: 'D', e: 'Kolokyal — pinaikling anyo ng "paano".' },
+      { q: 'Ang <u>pamahalaan</u> ay naglunsad ng bagong programa para sa kabataan.', a: 'A', e: 'Pambansa — pormal at opisyal na salita.' },
+      { q: '<u>Chibog</u> na tayo bago lumubog ang araw.', a: 'E', e: 'Balbal — impormal na salita para sa pagkain.' }
+    ]
+  },
+  {
+    section: 'II. Pag-unawa at Pagsusuri',
+    instruction: 'Panuto: Piliin ang pinakatamang sagot.',
+    questions: [
+      { q: 'Alin sa mga sumusunod ang katangian ng wikang PAMBANSA?', a: 'B', options: ['Ginagamit ito sa usapang kalye lamang', 'Ito ay nauunawaan ng buong bansa at ginagamit sa mga opisyal na dokumento', 'Ito ay mga salitang karaniwang naririnig sa tiyak na probinsya', 'Ito ay mga salitang bagong likha ng mga kabataan'], e: 'Ang Pambansa ay nauunawaan ng buong bansa at ginagamit sa opisyal na dokumento.' },
+      { q: 'Bakit PAMPANITIKAN ang ginagamit sa mga tula at kwento?', a: 'C', options: ['Dahil ito ay madaling intindihin ng lahat', 'Dahil ito ay hango sa ibang wika', 'Dahil may masining, malalim, at matalinghagang pagpapahayag', 'Dahil ito ay ginagamit ng mga matatanda lamang'], e: 'Ang Pampanitikan ay may masining at matalinghagang pagpapahayag.' },
+      { q: 'Alin sa mga sumusunod ang LALAWIGANIN?', a: 'B', options: ['salitang "maganda"', 'salitang "inday" o "ading"', 'salitang "pulis"', 'salitang "epal"'], e: 'Ang "inday" o "ading" ay mga salitang lalawiganin.' },
+      { q: 'Ano ang pagkakaiba ng KOLOKYAL sa ibang antas?', a: 'A', options: ['Ito ay pinaikli o binagong anyo ng salitang pambansa, ginagamit sa magkakaibigan', 'Ito ay ginagamit sa mga pormal na pagsusulit', 'Ito ay mga salitang hindi na ginagamit ngayon', 'Ito ay hango sa mga dayuhang wika'], e: 'Ang Kolokyal ay pinaikli o binagong anyo ng salitang pambansa.' },
+      { q: 'Alin sa mga sumusunod ang BALBAL?', a: 'C', options: ['guro', 'titser', 'par', 'gurohan'], e: 'Ang "par" ay balbal na tawag sa kaibigan.' },
+      { q: 'Alin ang HINDI tamang pagtutumbas?', a: 'C', options: ['Pambansa — opisyal na wika', 'Pampanitikan — talinghaga at sining', 'Lalawiganin — ginagamit sa buong bansa', 'Balbal — salitang-kalye'], e: 'Ang Lalawiganin ay hindi ginagamit sa buong bansa kundi sa isang rehiyon lamang.' },
+      { q: 'Ang katagang "ang kanyang ngiti ay sikat ng araw" ay anong antas?', a: 'B', options: ['Pambansa', 'Pampanitikan', 'Lalawiganin', 'Kolokyal'], e: 'Pampanitikan — gumagamit ng metapora.' },
+      { q: 'Alin ang halimbawa ng KOLOKYAL?', a: 'A', options: ['mayroon → meron', 'ama → erpat', 'kumain → mangan', 'maganda → marikit'], e: 'Ang "meron" ay kolokyal na anyo ng "mayroon".' },
+      { q: 'Saan pinakamainam gamitin ang wikang PAMBANSA?', a: 'C', options: ['sa usapan ng magkakaibigan sa kanto', 'sa tula at maikling kwento', 'sa talumpati, batas, at mga aklat-pampaaralan', 'sa kwentuhan sa loob ng bahay'], e: 'Ang Pambansa ay angkop sa pormal na komunikasyon.' },
+      { q: 'Bakit mahalagang kilalanin ang pagkakaiba ng limang antas ng wika?', a: 'B', options: ['Upang malaman kung alin ang mas magandang wika', 'Upang magamit ang angkop na wika sa tamang tao, lugar, at pagkakataon', 'Upang makapagmalaki sa iba', 'Upang malaman kung alin ang wika ng mayaman'], e: 'Ang kahalagahan ay ang paggamit ng angkop na wika sa tamang konteksto.' }
+    ]
+  }
+];
+
+function initWrittenQuiz() {
+  const card = document.getElementById('writtenCard');
+  const resultCard = document.getElementById('writtenResult');
+  if (!card) return;
+
+  // Flatten ang lahat ng tanong
+  const allQuestions = [];
+  writtenQuizData.forEach((section, sIdx) => {
+    section.questions.forEach(q => {
+      allQuestions.push({ ...q, section: section.section, sectionIdx: sIdx });
+    });
+  });
+
+  const TOTAL = allQuestions.length;
+  let index = 0;
+  let score = 0;
+  let chosen = false;
+
+  const count = document.getElementById('writtenCount');
+  const bar = document.getElementById('writtenProgressBar');
+  const sectionTag = document.getElementById('writtenSectionTag');
+  const instructionEl = document.getElementById('writtenInstruction');
+  const questionEl = document.getElementById('writtenQuestion');
+  const answersEl = document.getElementById('writtenAnswers');
+  const feedbackEl = document.getElementById('writtenFeedback');
+  const nextBtn = document.getElementById('writtenNextBtn');
+  const headerScore = document.getElementById('headerScore');
+  const nameInput = document.getElementById('studentName');
+  const dateInput = document.getElementById('studentDate');
+
+  // Auto-fill date
+  if (dateInput && !dateInput.value) {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    dateInput.value = yyyy + '-' + mm + '-' + dd;
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '—';
+    const d = new Date(dateStr + 'T00:00:00');
+    if (isNaN(d)) return dateStr;
+    const months = ['Enero','Pebrero','Marso','Abril','Mayo','Hunyo','Hulyo','Agosto','Setyembre','Oktubre','Nobyembre','Disyembre'];
+    return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+  }
+
+  function validateName() {
+    const name = (nameInput?.value || '').trim();
+    if (!name) {
+      nameInput?.focus();
+      nameInput?.classList.add('shake');
+      setTimeout(() => nameInput?.classList.remove('shake'), 500);
+      return false;
+    }
+    return true;
+  }
+
+  function renderQuestion() {
+    const item = allQuestions[index];
+    if (!item) return;
+
+    chosen = false;
+
+    count.textContent = 'Tanong ' + (index + 1) + ' sa ' + TOTAL;
+    bar.style.width = ((index + 1) / TOTAL * 100) + '%';
+    sectionTag.textContent = item.section;
+
+    const section = writtenQuizData[item.sectionIdx];
+    instructionEl.textContent = section.instruction;
+    questionEl.innerHTML = '<span class="written-q-num">' + (index + 1) + '.</span> ' + item.q;
+
+    answersEl.innerHTML = '';
+    const options = item.options || ['Pambansa', 'Pampanitikan', 'Lalawiganin', 'Kolokyal', 'Balbal'];
+
+    options.forEach((opt, i) => {
+      const letter = String.fromCharCode(65 + i);
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'written-answer';
+      btn.innerHTML = '<span class="written-answer-key">' + letter + '</span><span class="written-answer-text">' + opt + '</span>';
+      btn.addEventListener('click', () => {
+        if (!validateName()) return;
+        selectAnswer(i, btn);
+      });
+      answersEl.appendChild(btn);
+    });
+
+    feedbackEl.innerHTML = '';
+    feedbackEl.className = 'written-feedback-box';
+    nextBtn.disabled = true;
+    nextBtn.innerHTML = 'Susunod <span>→</span>';
+  }
+
+  function selectAnswer(i, btn) {
+    if (chosen) return;
+    chosen = true;
+
+    const item = allQuestions[index];
+    const buttons = answersEl.querySelectorAll('.written-answer');
+    const correctIdx = item.a.charCodeAt(0) - 65;
+
+    buttons.forEach((el, j) => {
+      el.disabled = true;
+      if (j === correctIdx) el.classList.add('correct');
+    });
+
+    if (i === correctIdx) {
+      score++;
+      feedbackEl.innerHTML = '<strong>✓ Tama!</strong> ' + (item.e || '');
+      feedbackEl.classList.add('correct');
+      fireConfetti();
+    } else {
+      btn.classList.add('wrong');
+      feedbackEl.innerHTML = '<strong>✗ Mali.</strong> Ang tamang sagot ay <b>' + item.a + '</b>. ' + (item.e || '');
+      feedbackEl.classList.add('wrong');
+    }
+
+    if (headerScore) headerScore.textContent = score + ' / 20';
+    nextBtn.disabled = false;
+
+    if (index === TOTAL - 1) {
+      nextBtn.innerHTML = 'Tapusin <span>✓</span>';
+    }
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (index < TOTAL - 1) {
+      index++;
+      renderQuestion();
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      showResult();
+    }
+  });
+
+  function showResult() {
+    card.hidden = true;
+    resultCard.hidden = false;
+
+    document.getElementById('finalWrittenScore').textContent = score;
+    const pct = score / TOTAL;
+
+    document.getElementById('writtenResultTitle').textContent =
+      pct >= 0.9 ? 'Napakahusay!' :
+      pct >= 0.75 ? 'Mahusay!' :
+      pct >= 0.5 ? 'Maganda ang pundasyon.' :
+      'Kailangan pang magsanay.';
+
+    document.getElementById('writtenResultText').textContent =
+      pct >= 0.9 ? 'Ganap mong nauunawaan ang mga antas ng wika. Keep it up!' :
+      pct >= 0.75 ? 'Malinaw sa iyo ang karamihan ng konsepto. Balikan ang mga tanong na hindi nakuha.' :
+      pct >= 0.5 ? 'May pundasyon ka na. Balikan ang mga module para sa mas malinaw na pag-unawa.' :
+      'Balikan ang mga aralin at subukan muli. Kaya mo yan!';
+
+    const name = (nameInput?.value || '').trim() || '—';
+    document.getElementById('resultName').textContent = name;
+    document.getElementById('resultDate').textContent = formatDate(dateInput?.value);
+
+    if (pct >= 0.9) fireConfetti();
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // Restart
+  document.getElementById('restartWrittenBtn')?.addEventListener('click', () => {
+    index = 0;
+    score = 0;
+    if (headerScore) headerScore.textContent = '— / 20';
+    resultCard.hidden = true;
+    card.hidden = false;
+    renderQuestion();
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Share
+  function buildShareText() {
+    const name = (nameInput?.value || '').trim() || '—';
+    const date = formatDate(dateInput?.value);
+    const pct = Math.round((score / TOTAL) * 100);
+    return '📝 PAGSUSULIT: ANTAS NG WIKA\n' +
+           '━━━━━━━━━━━━━━━━━━\n' +
+           '👤 Pangalan: ' + name + '\n' +
+           '📅 Petsa: ' + date + '\n' +
+           '🎯 Iskor: ' + score + ' / ' + TOTAL + ' (' + pct + '%)\n' +
+           '━━━━━━━━━━━━━━━━━━\n' +
+           'Subukan din: ' + location.href;
+  }
+
+  document.getElementById('shareWrittenQuiz')?.addEventListener('click', async () => {
+    const text = buildShareText();
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'Pagsusulit: Antas ng Wika', text: text, url: location.href });
+        return;
+      } catch (err) {
+        if (err.name === 'AbortError') return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(text);
+      showHint('✓ Nakopya na! I-paste sa chat.');
+    } catch {
+      fallbackCopy(text);
+      showHint('✓ Nakopya na! I-paste sa chat.');
+    }
+  });
+
+  document.getElementById('copyWrittenQuiz')?.addEventListener('click', async () => {
+    const text = buildShareText();
+    try {
+      await navigator.clipboard.writeText(text);
+      showHint('✓ Nakopya na sa clipboard!');
+    } catch {
+      fallbackCopy(text);
+      showHint('✓ Nakopya na sa clipboard!');
+    }
+  });
+
+  function showHint(msg) {
+    const hint = document.getElementById('shareHint');
+    if (!hint) return;
+    hint.textContent = msg;
+    hint.hidden = false;
+    setTimeout(() => { hint.hidden = true; }, 3000);
+  }
+
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch {}
+    document.body.removeChild(ta);
+  }
+
+  // Initial render
+  renderQuestion();
+}
+
+if (document.getElementById('writtenCard')) {
+  initWrittenQuiz();
+}

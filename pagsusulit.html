@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="20 tanong na written quiz tungkol sa Antas ng Wika.">
+  <meta name="description" content="20 tanong na written quiz tungkol sa Antas ng Wika — isa-isa, may feedback.">
   <meta name="theme-color" content="#121842">
   <title>Pagsusulit — Antas ng Wika</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23121842'/%3E%3Cpath d='M15 19h34v22H31l-10 8v-8h-6z' fill='%23ffc93c'/%3E%3C/svg%3E">
@@ -36,11 +36,12 @@
   </header>
 
   <main id="main">
+    <!-- HERO -->
     <section id="simula" class="written-hero section-pad">
       <div class="written-hero-copy">
         <p class="eyebrow">PAGSUSULIT • WRITTEN</p>
         <h1>Pagsusulit: <em>Antas ng Wika</em></h1>
-        <p class="lede">20 tanong na susubok sa iyong pag-unawa sa limang antas ng wika. May auto-check, feedback, at print option.</p>
+        <p class="lede">20 tanong na isa-isang lalabas. May feedback agad pagkatapos ng bawat sagot. Isulat ang pangalan at petsa bago magsimula.</p>
         <div class="hero-meta">
           <span><b>20</b> tanong</span>
           <span><b>2</b> bahagi</span>
@@ -55,7 +56,9 @@
       </div>
     </section>
 
+    <!-- PAGSUSULIT (Sequential) -->
     <section class="written-quiz section-pad">
+      <!-- Header with name, date, score -->
       <div class="written-quiz-header">
         <div class="written-quiz-info">
           <label class="written-field">
@@ -66,7 +69,7 @@
             <span><b>Petsa:</b></span>
             <input type="date" id="studentDate">
           </label>
-          <span class="written-score-display"><b>Iskor:</b> <span id="headerScore">___ / 20</span></span>
+          <span class="written-score-display"><b>Iskor:</b> <span id="headerScore">— / 20</span></span>
         </div>
         <div class="written-quiz-legend">
           <span><b>A.</b> Pambansa</span>
@@ -77,19 +80,33 @@
         </div>
       </div>
 
-      <div class="written-quiz-container" id="writtenQuizContainer"></div>
+      <!-- Quiz Card (isa-isang tanong) -->
+      <div class="written-card" id="writtenCard">
+        <div class="written-top">
+          <span id="writtenCount">Tanong 1 sa 20</span>
+          <div class="progress"><i id="writtenProgressBar"></i></div>
+          <span class="written-section-tag" id="writtenSectionTag">Bahagi I</span>
+        </div>
 
-      <div class="written-quiz-actions">
-        <button id="checkWrittenQuiz" class="button primary">Suriin ang Sagot ✓</button>
-        <button id="resetWrittenQuiz" class="button ghost">I-reset ↻</button>
-        <button id="printWrittenQuiz" class="button ghost">I-print 🖨️</button>
+        <p class="written-instruction" id="writtenInstruction"></p>
+        <h3 id="writtenQuestion"></h3>
+
+        <div id="writtenAnswers" class="written-answers" role="group" aria-label="Mga pagpipilian"></div>
+
+        <div id="writtenFeedback" class="written-feedback-box" aria-live="polite"></div>
+
+        <div class="written-card-actions">
+          <button id="writtenNextBtn" class="button primary next" disabled>Susunod <span>→</span></button>
+        </div>
       </div>
 
-      <div class="written-quiz-result" id="writtenQuizResult" hidden>
-        <h3>Resulta</h3>
+      <!-- Result Card -->
+      <div class="written-card result" id="writtenResult" hidden>
+        <p class="eyebrow">RESULTA</p>
         <div class="written-result-score">
-          <span id="writtenScore">0</span><small>/ 20</small>
+          <span id="finalWrittenScore">0</span><small>/ 20</small>
         </div>
+        <h3 id="writtenResultTitle"></h3>
         <p id="writtenResultText"></p>
 
         <div class="result-share-info">
@@ -98,7 +115,8 @@
         </div>
 
         <div class="written-result-actions">
-          <button id="shareWrittenQuiz" class="button primary">📤 I-send sa Chat</button>
+          <button id="restartWrittenBtn" class="button primary">Subukan muli ↻</button>
+          <button id="shareWrittenQuiz" class="button ghost">📤 I-send sa Chat</button>
           <button id="copyWrittenQuiz" class="button ghost">📋 Kopyahin</button>
         </div>
 
