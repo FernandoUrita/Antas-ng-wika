@@ -77,10 +77,8 @@ const lessons = {
   }
 };
 
-/* -------- 2. QUIZ (20 tanong, A-E) -------- */
-/* -------- 2. QUIZ POOL (50 tanong, A-E) -------- */
+/* -------- 2. QUIZ POOL (50 tanong) -------- */
 const quizPool = [
-  // === EXISTING 20 ===
   { s:'Pormal na komunikasyon', q:'Anong antas ng wika ang karaniwang ginagamit sa mga aklat-aralin, opisyal na dokumento, at pormal na komunikasyon?',
     a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:0,
     e:'Ang Pambansa ang pamantayang wikang ginagamit sa pormal na komunikasyon.' },
@@ -141,8 +139,6 @@ const quizPool = [
   { s:'Konteksto', q:'Isang estudyante ang gumamit ng pormal na Filipino habang nag-uulat, ngunit gumamit ng “tropa” at iba pang balbal nang kausapin ang mga kaibigan. Ano ang ipinapakita nito?',
     a:['Iisa lamang ang maaaring gamiting antas ng wika ng isang tao','Nagbabago ang antas ng wika ayon sa konteksto at kausap','Balbal lamang ang dapat gamitin sa paaralan','Hindi maaaring pagsabayin ang iba’t ibang antas ng wika','Pampanitikan ang lahat ng impormal na salita'], c:1,
     e:'Ang antas ng wika ay nagbabago ayon sa konteksto at kausap.' },
-
-  // === BAGONG 30 ===
   { s:'Tula para sa ina', q:'“Ang bulaklak ng kanyang ngiti ay nagbibigay ng kulay sa aking umaga.” Anong antas ng wika ang ginamit?',
     a:['Pambansa','Pampanitikan','Lalawiganin','Kolokyal','Balbal'], c:1,
     e:'Pampanitikan—gumagamit ng metapora at masining na paglalarawan.' },
@@ -295,7 +291,7 @@ const quizPool = [
     e:'Pampanitikan—sambotani, akdang pampanitikan.' }
 ];
 
-const TOTAL_QUESTIONS = 20;  // Bilang ng tanong kada session
+const TOTAL_QUESTIONS = 20;
 const STORAGE_SESSION = 'antas_wika_quiz_session_v3';
 
 /* -------- 3. GLOSSARY DATA -------- */
@@ -472,14 +468,12 @@ if (memberDialog && memberContent) {
             <span class="member-tag">${data.role}</span>
             <h2 id="memberName">${data.name}</h2>
             <p class="member-bio">${data.bio}</p>
-
             ${data.moto ? `
               <div class="member-moto">
                 <span class="member-moto-label">Moto</span>
                 <p>${data.moto}</p>
               </div>
             ` : ''}
-
             ${(hasFb || hasIg) ? `
               <div class="member-socials">
                 ${hasFb ? `<a href="${data.fb}" target="_blank" rel="noopener" class="social-link fb" aria-label="Facebook">Facebook</a>` : ''}
@@ -498,8 +492,7 @@ if (memberDialog && memberContent) {
   memberDialog.addEventListener('close', () => { if (lastFocusedMember) lastFocusedMember.focus(); });
 }
 
-/* -------- 10. QUIZ ENGINE -------- */
-/* -------- 10. QUIZ ENGINE (random 20 mula sa pool, persistent sa refresh) -------- */
+/* -------- 10. INTERACTIVE QUIZ ENGINE -------- */
 const quizCard = $('#quizCard');
 if (quizCard) {
   let index = 0, score = 0, chosen = false;
@@ -518,10 +511,8 @@ if (quizCard) {
   const timerToggle = $('#timerToggle');
   const resultCard  = $('#resultCard');
 
-  // Ang session array (20 random questions) - ito ang lalaruin
   let quiz = [];
 
-  // Fisher-Yates shuffle
   function shuffle(arr) {
     const a = [...arr];
     for (let i = a.length - 1; i > 0; i--) {
@@ -531,20 +522,18 @@ if (quizCard) {
     return a;
   }
 
-  // Gumawa ng bagong random session
   function createNewSession() {
     return {
       questions: shuffle(quizPool).slice(0, TOTAL_QUESTIONS),
       index: 0,
       score: 0,
       chosen: false,
-      selected: null,     // index ng napiling sagot sa current question
-      completed: false,   // tapos na ba ang buong quiz
+      selected: null,
+      completed: false,
       ts: Date.now()
     };
   }
 
-  // I-save ang session sa localStorage
   function saveSession() {
     try {
       localStorage.setItem(STORAGE_SESSION, JSON.stringify({
@@ -557,7 +546,6 @@ if (quizCard) {
     } catch {}
   }
 
-  // I-load ang session mula sa localStorage
   function loadSession() {
     try {
       const raw = localStorage.getItem(STORAGE_SESSION);
@@ -588,7 +576,6 @@ if (quizCard) {
       answersEl.appendChild(b);
     });
 
-    // Kung may naunang sagot na (galing sa refresh), ibalik ang estado
     if (chosen && selectedAnswer !== null) {
       const btns = $$('.answer');
       btns.forEach((el, j) => {
@@ -687,7 +674,6 @@ if (quizCard) {
   });
 
   $('#restartBtn').addEventListener('click', () => {
-    // Bagong random 20
     const session = createNewSession();
     quiz = session.questions;
     index = 0; score = 0;
@@ -725,10 +711,8 @@ if (quizCard) {
     });
   }
 
-  // ===== INIT: load existing o gumawa ng bagong session =====
   const saved = loadSession();
   if (saved) {
-    // May ongoing o tapos na session — i-restore
     quiz = saved.questions;
     index = saved.index || 0;
     score = saved.score || 0;
@@ -736,7 +720,6 @@ if (quizCard) {
     selectedAnswer = (typeof saved.selected === 'number') ? saved.selected : null;
 
     if (saved.completed) {
-      // Tapos na — ipakita ang result
       quizCard.hidden = true;
       resultCard.hidden = false;
       $('#finalScore').textContent = score;
@@ -749,40 +732,15 @@ if (quizCard) {
                                                     'I-click muli ang mga larawang-aralin at ituon ang pansin sa kausap, layunin, lugar, at sitwasyon.';
       scorePrev.textContent = score;
     } else {
-      // Ongoing — ituloy
       scorePrev.textContent = score;
       renderQuestion();
     }
   } else {
-    // Walang session — gumawa ng bago
     const session = createNewSession();
     quiz = session.questions;
     index = 0; score = 0; chosen = false; selectedAnswer = null;
     saveSession();
     renderQuestion();
-  }
-
-  if (document.modelContext?.registerTool) {
-    const ac = new AbortController();
-    Promise.resolve(document.modelContext.registerTool({
-      name: 'start_antas_ng_wika_quiz',
-      title: 'Simulan ang pagsusulit',
-      description: 'Buksan at i-reset ang pagsusulit (bagong random 20 tanong).',
-      inputSchema: { type:'object', properties:{}, additionalProperties:false },
-      annotations: { readOnlyHint:false, untrustedContentHint:false },
-      execute() {
-        const session = createNewSession();
-        quiz = session.questions;
-        index = 0; score = 0; chosen = false; selectedAnswer = null;
-        scorePrev.textContent = '—';
-        resultCard.hidden = true;
-        quizCard.hidden = false;
-        saveSession();
-        renderQuestion();
-        $('#pagsusulit').scrollIntoView();
-        return { status:'started', questions: quiz.length };
-      }
-    }, { signal: ac.signal })).catch(() => {});
   }
 }
 
@@ -862,7 +820,7 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: .12 });
 $$('.reveal').forEach(x => io.observe(x));
 
-/* -------- 15. GLOSSARY (grid cards + modal) -------- */
+/* -------- 15. GLOSSARY -------- */
 function renderGlossary() {
   const list = $('#glossaryList');
   if (!list) return;
@@ -895,7 +853,6 @@ function renderGlossary() {
 }
 renderGlossary();
 
-/* -------- 16. FUN FACT CAROUSEL -------- */
 /* -------- 16. FUN FACT CAROUSEL -------- */
 (function initCarousel() {
   const track = $('#carouselTrack');
@@ -935,23 +892,17 @@ renderGlossary();
   if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
   dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.slide)));
 
-  // Keyboard: global (naka-attach sa document, hindi sa root)
   document.addEventListener('keydown', e => {
-    // Huwag harangin kung may bukas na dialog o nasa input
     if (document.querySelector('dialog[open]')) return;
     const tag = document.activeElement.tagName;
     if (['INPUT', 'TEXTAREA', 'SELECT'].includes(tag)) return;
-
-    // Siguraduhing nasa viewport ang carousel bago tumugon
     const rect = root.getBoundingClientRect();
     const inView = rect.top < window.innerHeight && rect.bottom > 0;
     if (!inView) return;
-
     if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
     if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
   });
 
-  // Swipe (touch)
   let startX = 0, startY = 0, tracking = false;
   track.addEventListener('touchstart', e => {
     if (e.touches.length !== 1) return;
@@ -1010,8 +961,9 @@ if (backTopBtn) {
 /* -------- 19. YEAR -------- */
 const yearEl = $('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 /* =========================================================
-   WRITTEN QUIZ — pagsusulit.html (20 tanong)
+   WRITTEN QUIZ — pagsusulit.html (sequential)
    ========================================================= */
 const writtenQuizData = [
   {
@@ -1053,7 +1005,6 @@ function initWrittenQuiz() {
   const resultCard = document.getElementById('writtenResult');
   if (!card) return;
 
-  // Flatten ang lahat ng tanong
   const allQuestions = [];
   writtenQuizData.forEach((section, sIdx) => {
     section.questions.forEach(q => {
@@ -1078,7 +1029,6 @@ function initWrittenQuiz() {
   const nameInput = document.getElementById('studentName');
   const dateInput = document.getElementById('studentDate');
 
-  // Auto-fill date
   if (dateInput && !dateInput.value) {
     const today = new Date();
     const yyyy = today.getFullYear();
@@ -1166,7 +1116,7 @@ function initWrittenQuiz() {
       feedbackEl.classList.add('wrong');
     }
 
-    if (headerScore) headerScore.textContent = score + ' / 20';
+    if (headerScore) headerScore.textContent = score + ' / ' + TOTAL;
     nextBtn.disabled = false;
 
     if (index === TOTAL - 1) {
@@ -1211,18 +1161,16 @@ function initWrittenQuiz() {
     resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
-  // Restart
   document.getElementById('restartWrittenBtn')?.addEventListener('click', () => {
     index = 0;
     score = 0;
-    if (headerScore) headerScore.textContent = '— / 20';
+    if (headerScore) headerScore.textContent = '— / ' + TOTAL;
     resultCard.hidden = true;
     card.hidden = false;
     renderQuestion();
     card.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  // Share
   function buildShareText() {
     const name = (nameInput?.value || '').trim() || '—';
     const date = formatDate(dateInput?.value);
@@ -1285,10 +1233,36 @@ function initWrittenQuiz() {
     document.body.removeChild(ta);
   }
 
-  // Initial render
   renderQuestion();
 }
 
 if (document.getElementById('writtenCard')) {
   initWrittenQuiz();
 }
+
+/* =========================================================
+   ENHANCEMENT: Keyboard shortcuts + auto-scroll feedback
+   ========================================================= */
+(function enhanceWrittenQuiz() {
+  if (!document.getElementById('writtenCard')) return;
+
+  document.addEventListener('keydown', (e) => {
+    const card = document.getElementById('writtenCard');
+    const result = document.getElementById('writtenResult');
+    if (!card || card.hidden || !result.hidden) return;
+
+    const tag = document.activeElement.tagName;
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(tag)) return;
+
+    const k = e.key.toLowerCase();
+    const map = { a: 0, b: 1, c: 2, d: 3, e: 4 };
+    if (k in map) {
+      const btns = document.querySelectorAll('.written-answer');
+      if (btns[map[k]] && !btns[map[k]].disabled) btns[map[k]].click();
+    }
+    if (e.key === 'Enter') {
+      const nextBtn = document.getElementById('writtenNextBtn');
+      if (nextBtn && !nextBtn.disabled) nextBtn.click();
+    }
+  });
+})();
