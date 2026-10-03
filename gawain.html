@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="20 tanong na written quiz tungkol sa Antas ng Wika — isa-isa, may feedback.">
+  <meta name="description" content="Mga karagdagang gawain sa Antas ng Wika — identification at pagsasalin.">
   <meta name="theme-color" content="#121842">
-  <title>Pagsusulit — Antas ng Wika</title>
+  <title>Mga Gawain — Antas ng Wika</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23121842'/%3E%3Cpath d='M15 19h34v22H31l-10 8v-8h-6z' fill='%23ffc93c'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +26,8 @@
         <a href="index.html#funfact">Fun Fact</a>
         <a href="index.html#pagsusulit">Pagsusulit</a>
         <a href="index.html#activities">Mga Gawain</a>
-        <a href="pagsusulit.html" class="active" aria-current="page">Written</a>
-        <a href="gawain.html">Gawain</a>
+        <a href="pagsusulit.html">Written</a>
+        <a href="gawain.html" class="active" aria-current="page">Gawain</a>
         <a href="about.html">Mga Mananaliksik</a>
       </div>
       <div class="nav-tools">
@@ -38,25 +38,27 @@
   </header>
 
   <main id="main">
+    <!-- HERO -->
     <section id="simula" class="written-hero section-pad">
       <div class="written-hero-copy">
-        <p class="eyebrow">PAGSUSULIT • WRITTEN</p>
-        <h1>Pagsusulit: <em>Antas ng Wika</em></h1>
-        <p class="lede">20 tanong na isa-isang lalabas. May feedback agad pagkatapos ng bawat sagot. Isulat ang pangalan at petsa bago magsimula.</p>
+        <p class="eyebrow">MGA GAWAIN • INTERAKTIBO</p>
+        <h1>Mga Karagdagang <em>Gawain</em></h1>
+        <p class="lede">Dalawang bahagi: <strong>Pagkilala</strong> sa antas ng wika, at <strong>Pagsasalin</strong> sa Wikang Pambansa. Isa-isang lalabas ang mga tanong, may feedback agad pagkatapos ng bawat sagot.</p>
         <div class="hero-meta">
-          <span><b>20</b> tanong</span>
+          <span><b>40</b> tanong</span>
           <span><b>2</b> bahagi</span>
-          <span><b>~15</b> minuto</span>
+          <span><b>~25</b> minuto</span>
         </div>
       </div>
       <div class="written-hero-art" aria-hidden="true">
         <div class="written-badge">
-          <span class="written-badge-no">20</span>
+          <span class="written-badge-no">40</span>
           <span class="written-badge-label">Tanong</span>
         </div>
       </div>
     </section>
 
+    <!-- GAWAIN (Sequential) -->
     <section class="written-quiz section-pad">
       <div class="written-quiz-header">
         <div class="written-quiz-info">
@@ -68,9 +70,9 @@
             <span><b>Petsa:</b></span>
             <input type="date" id="studentDate">
           </label>
-          <span class="written-score-display"><b>Iskor:</b> <span id="headerScore">— / 20</span></span>
+          <span class="written-score-display"><b>Iskor:</b> <span id="headerScore">— / 40</span></span>
         </div>
-        <div class="written-quiz-legend">
+        <div class="written-quiz-legend" id="legendDynamic">
           <span><b>A.</b> Pambansa</span>
           <span><b>B.</b> Pampanitikan</span>
           <span><b>C.</b> Lalawiganin</span>
@@ -79,32 +81,33 @@
         </div>
       </div>
 
-      <div class="written-card" id="writtenCard">
+      <div class="written-card" id="gawainCard">
         <div class="written-top">
-          <span id="writtenCount">Tanong 1 sa 20</span>
-          <div class="progress"><i id="writtenProgressBar"></i></div>
-          <span class="written-section-tag" id="writtenSectionTag">Bahagi I</span>
+          <span id="gawainCount">Tanong 1 sa 40</span>
+          <div class="progress"><i id="gawainProgressBar"></i></div>
+          <span class="written-section-tag" id="gawainSectionTag">Bahagi I</span>
         </div>
 
-        <p class="written-instruction" id="writtenInstruction"></p>
-        <h3 id="writtenQuestion"></h3>
+        <p class="written-instruction" id="gawainInstruction"></p>
+        <h3 id="gawainQuestion"></h3>
 
-        <div id="writtenAnswers" class="written-answers" role="group" aria-label="Mga pagpipilian"></div>
+        <div id="gawainAnswers" class="written-answers" role="group" aria-label="Mga pagpipilian"></div>
 
-        <div id="writtenFeedback" class="written-feedback-box" aria-live="polite"></div>
+        <div id="gawainFeedback" class="written-feedback-box" aria-live="polite"></div>
 
         <div class="written-card-actions">
-          <button id="writtenNextBtn" class="button primary next" disabled>Susunod <span>→</span></button>
+          <button id="gawainNextBtn" class="button primary next" disabled>Susunod <span>→</span></button>
         </div>
       </div>
 
-      <div class="written-card result" id="writtenResult" hidden>
+      <!-- Result -->
+      <div class="written-card result" id="gawainResult" hidden>
         <p class="eyebrow">RESULTA</p>
         <div class="written-result-score">
-          <span id="finalWrittenScore">0</span><small>/ 20</small>
+          <span id="finalGawainScore">0</span><small>/ 40</small>
         </div>
-        <h3 id="writtenResultTitle"></h3>
-        <p id="writtenResultText"></p>
+        <h3 id="gawainResultTitle"></h3>
+        <p id="gawainResultText"></p>
 
         <div class="result-share-info">
           <p><b>Pangalan:</b> <span id="resultName">—</span></p>
@@ -112,12 +115,55 @@
         </div>
 
         <div class="written-result-actions">
-          <button id="restartWrittenBtn" class="button primary">Subukan muli ↻</button>
-          <button id="shareWrittenQuiz" class="button ghost">📤 I-send sa Chat</button>
-          <button id="copyWrittenQuiz" class="button ghost">📋 Kopyahin</button>
+          <button id="restartGawainBtn" class="button primary">Subukan muli ↻</button>
+          <button id="shareGawainQuiz" class="button ghost">📤 I-send sa Chat</button>
+          <button id="copyGawainQuiz" class="button ghost">📋 Kopyahin</button>
         </div>
 
         <p class="share-hint" id="shareHint" hidden>✓ Nakopya na sa clipboard!</p>
+      </div>
+    </section>
+
+    <!-- ACTIVITY SHEETS (GDrive) -->
+    <section id="activities" class="activities section-pad">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">MGA GAWAIN • DOWNLOAD</div>
+          <h2>Mga Worksheet 📝</h2>
+        </div>
+        <p>Pindutin ang bawat card para buksan ang gawain sa Google Drive. Pwede i-download o i-print.</p>
+      </div>
+
+      <div class="activity-grid">
+        <a class="activity-card" href="https://drive.google.com/drive/folders/1_UHp1W0NKcNYYNV2c-ffhXE_CcPCC1iv?usp=sharing" target="_blank" rel="noopener">
+          <div class="activity-card-header">
+            <span class="activity-no">01</span>
+            <span class="activity-icon">🧩</span>
+          </div>
+          <h3>Kriss-Kross sa Antas ng Wika</h3>
+          <p>Pagsalin sa Wikang Pambansa ayon sa antas ng wika na tinutukoy.</p>
+          <span class="activity-link">Buksan ang gawain →</span>
+        </a>
+
+        <a class="activity-card" href="https://drive.google.com/drive/folders/14_Mtifp3s-qRUH-Sgj4Ry2ItYEQTswvJ?usp=sharing" target="_blank" rel="noopener">
+          <div class="activity-card-header">
+            <span class="activity-no">02</span>
+            <span class="activity-icon">✏️</span>
+          </div>
+          <h3>Crossword Puzzle — Antas ng Wika</h3>
+          <p>Wikang Pambansa, Pampanitikan, Lalawiganin, Kolokyal, at Balbal.</p>
+          <span class="activity-link">Buksan ang gawain →</span>
+        </a>
+
+        <a class="activity-card" href="https://drive.google.com/drive/folders/1dbS5xcfG0el6M5eGa3m5Sx5JwdPXwUOf?usp=sharing" target="_blank" rel="noopener">
+          <div class="activity-card-header">
+            <span class="activity-no">03</span>
+            <span class="activity-icon">📖</span>
+          </div>
+          <h3>Krossword sa Antas ng Wika</h3>
+          <p>Leksikal, Semantiko, Morpolohikal, Sintaktikal, at Pragmatiko.</p>
+          <span class="activity-link">Buksan ang gawain →</span>
+        </a>
       </div>
     </section>
   </main>
@@ -137,9 +183,8 @@
             <li><a href="index.html#talasalitaan">Talasalitaan</a></li>
             <li><a href="index.html#funfact">Fun Fact</a></li>
             <li><a href="index.html#pagsusulit">Pagsusulit</a></li>
-            <li><a href="index.html#activities">Activities</a></li>
-            <li><a href="pagsusulit.html">Written</a></li>
-            <li><a href="gawain.html">Gawain</a></li>
+            <li><a href="pagsusulit.html">Pagsusulit (Written)</a></li>
+            <li><a href="gawain.html">Mga Gawain</a></li>
             <li><a href="about.html">Mga Mananaliksik</a></li>
           </ul>
         </div>
@@ -164,5 +209,6 @@
   <button id="backTop" class="back-top-btn" aria-label="Bumalik sa itaas" title="Bumalik sa itaas" hidden>↑</button>
   <div id="confetti" class="confetti" aria-hidden="true"></div>
   <script src="script.js"></script>
+  <script src="gawain.js"></script>
 </body>
 </html>
